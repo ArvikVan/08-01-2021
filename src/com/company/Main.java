@@ -3,6 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Стук");
+        int d = 1212;
+        System.out.println("Стук " + d);
+
     }
 }
