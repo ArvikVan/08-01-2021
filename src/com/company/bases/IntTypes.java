@@ -1,4 +1,4 @@
-package com.company.types;
+package com.company.bases;
 
 public class IntTypes {
     public static void main(String[] args) {
