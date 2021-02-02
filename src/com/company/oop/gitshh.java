@@ -1,4 +1,4 @@
 package com.company.oop;
 
-public class bnk {
+public class gitshh {
 }
