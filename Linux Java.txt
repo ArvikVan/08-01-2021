@@ -1,0 +1,41 @@
+https://help.ubuntu.ru/wiki/java
+https://libericajdk.ru/pages/liberica-jdk/
+apt search openjdk
+sudo apt install openjdk-8-jdk
+sudo apt install openjdk-11-jdk
+sudo apt install openjdk-13-jdk
+sudo apt install openjdk-14-jdk
+java --version
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo gedit /etc/environment
+JAVA_HOME=”/usr/lib/jvm/java-14-openjdk-amd64”
+OR
+sudo dpkg -i jdk-14_linux-x64_bin.deb
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-14/bin/java 1
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-14/bin/javac 1
+
+На этом установка закончена. Чтобы проверить, что всё работает правильно, достаточно написать в терминале:
+java -version
+или
+javac -version
+
+Затем вас перенаправит на страницу входа, необходимо войти в свою учетную запись Oracle или создать новую, только после этого начнется загрузка выбранной версии. После завершения загрузки создайте папку /usr/lib/jvm/:
+
+Настройка
+sudo apt update либо sudo apt update && sudo apt dist-upgrade
+sudo apt update
+sudo snap refresh
+sudo apt install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+sudo apt install adobe-flashplugin
+sudo apt install browser-plugin-freshplayer-pepperflash
+sudo apt install chrome-gnome-shell https://extensions.gnome.org/
+sudo add-apt-repository ppa:graphics-drivers/ppa 
+sudo apt install ttf-mscorefonts-installer
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+sudo apt-get update && sudo apt-get install qbittorrent 
+gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['UTF-8', 'WINDOWS-1251', 'KOI8-R', 'CURRENT', 'ISO-8859-15', 'UTF-16']"
+sudo apt install thunar
+
+
+

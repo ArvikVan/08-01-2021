@@ -1,0 +1,29 @@
+git локален
+git --version  -верися гита
+git config --global user.email "you@example.com"
+git config --global user.name "Ваше Имя"
+git --help     -показывает все команды
+git init       -инициализация репозитория
+git status     -посмотреть что происходит с гитом
+git add (имя)  -добавляет файлы,папки за которыми будет следить гит
+git add .      -добавляет все файлы
+git commit -m "сообщение" -фиксация изменений
+git branch имя    -создает ветку
+git checkout имя  -переключение на ветку
+git checkout -b имя - создание и переключение на новую ветку
+git branch -D имя -удалить ветку
+git merge имя(имя ветки которую надо присоединить к master)  
+git remote add origin https://github.com/your repository.git - соединение git и github
+git push -u origin master -добавление локальных изменений сделаных в git на githab
+
+если забыл внести изменения и закоммитил
+git commit -m "dsfgdg"
+git add forgotten file
+git commit --amend
+Эффект от выполнения этой команды такой как будто ты 
+не выполнял предыдущий комминт команду git add и
+выполнил коммит
+git remote -v посмотреть через что аутентификация
+git remote set-url origin (shh ссылка) на репозиторий
+ 
+
