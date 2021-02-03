@@ -9,4 +9,11 @@ class Employe extends Person{
     public void work(){
         System.out.printf("%s works in %s", getName(), company);
     }
+
+    @Override
+    public void dispaly() {
+        //super.dispaly();
+        System.out.printf("Name : %s \n", getName());
+        System.out.printf("Company: %s \n", company);
+    }
 }
