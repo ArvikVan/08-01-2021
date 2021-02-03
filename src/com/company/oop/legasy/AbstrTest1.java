@@ -6,9 +6,12 @@ public class AbstrTest1 {
         System.out.println("И через него обращаемся к методу класса Dog");
         Doberman d = new Doberman();
         d.bark();
+        d.poop();
+        System.out.println();
         System.out.println("Обращаемся к объекту StreetDog str = new StreetDog();");
         System.out.println("И через него обращаемся к методу абстрактного класса Dog");
         StreetDog str = new StreetDog();
         str.bark();
+        str.poop();
     }
 }
