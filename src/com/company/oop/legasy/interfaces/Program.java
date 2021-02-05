@@ -2,9 +2,13 @@ package com.company.oop.legasy.interfaces;
 
 public class Program {
     public static void main(String[] args) {
-        Car car = new Volga();
-        car.breaks();
-        car.parking();
-        car.gas();
+        Car volga = new Volga();
+        volga.breaks();
+        volga.parking();
+        volga.gas();
+        Car niva = new Niva();
+        niva.breaks();
+        niva.gas();
+        niva.parking();
     }
 }
