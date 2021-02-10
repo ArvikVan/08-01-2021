@@ -1,5 +1,7 @@
 package com.company.inout;
 
+import com.company.oop.incapsulation.argum.Test;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
