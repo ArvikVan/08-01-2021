@@ -12,12 +12,12 @@ public class ShowFile {
         FileInputStream fin;
         //проверяем имя файла
         if (args.length != 1){
-            System.out.println("Использование: ShowFile Test.ods");
+            System.out.println("Использование: ShowFile Test.txt");
             return;
         }
         //попытка открыть файл
         try {
-            fin = new FileInputStream(args[0]);
+            fin = new FileInputStream("Test.txt");
         } catch (FileNotFoundException e) {
             System.out.println("Невозможно открыть файл ");
             return;
