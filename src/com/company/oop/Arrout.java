@@ -13,6 +13,7 @@ public class Arrout {
         };
         for (int i = 0; i < user.length; i++) {
             System.out.println(user[i].getUserName());
+            System.out.println(user[i].getUserName().length());
         }
     }
 }
