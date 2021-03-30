@@ -17,6 +17,6 @@ public class GetOrDefault {
     }
 
     public List<String> getValue(int index) {
-        return store.getOrDefault(index, Collections.emptyList()); // or List.of()
+        return store.getOrDefault(index, List.of()); // or Collection.iEmpty() не проходит
     }
 }
