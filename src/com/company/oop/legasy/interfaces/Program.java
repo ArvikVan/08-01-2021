@@ -6,7 +6,7 @@ public class Program {
         volga.breaks();
         volga.parking();
         volga.gas();
-        Car niva = new Niva();
+        Car niva = new Volga();
         niva.breaks();
         niva.gas();
         niva.parking();
