@@ -11,7 +11,7 @@ public class ShowFile {
         int i;
         FileInputStream fin;
         //проверяем имя файла
-        if (args.length != 1){
+        if (args.length != 1) {
             System.out.println("Использование: ShowFile Test.txt");
             return;
         }
@@ -21,13 +21,15 @@ public class ShowFile {
         } catch (FileNotFoundException e) {
             System.out.println("Невозможно открыть файл ");
             return;
-        }//файл открыт и готов к чтению
+        } //файл открыт и готов к чтению
         //читаем символы, пока не встретится признак конца файла
         try {
             do {
                 i = fin.read();
-                if (i != 1 ) System.out.println((char) i);
-            }while (i != -1);
+                if (i != 1) {
+                    System.out.println((char) i);
+                }
+            } while (i != -1);
         } catch (IOException e) {
             System.out.println("Ошибка чтения из файла ");
         }

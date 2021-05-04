@@ -2,7 +2,7 @@ package com.company.bases.cycles;
 
 import java.util.Scanner;
 
-public class ex3Cycle {
+public class Ex3Cycle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите сумму вклада: ");

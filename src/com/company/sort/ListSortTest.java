@@ -14,7 +14,7 @@ public class ListSortTest {
         List<String> input = Arrays.asList(null, "a", "b", "c");
         List<String> result = ListSort.sort(input);
         List<String> expected = Arrays.asList("c", "b", "a", null);
-        Assert.assertEquals(expected,result);
+        Assert.assertEquals(expected, result);
     }
 
 }

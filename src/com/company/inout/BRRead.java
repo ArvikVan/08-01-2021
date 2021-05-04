@@ -17,6 +17,6 @@ public class BRRead {
             //t r w e r q
             //Process finished with exit code 0
             System.out.print(c + " ");
-        }while (c != 'q');
+        } while (c != 'q');
     }
 }

@@ -12,10 +12,12 @@ public class ResCond {
         System.out.println("Input the second number");
         int num2 = scanner.nextInt();
 
-        if(num1 < num2){
+        if (num1 < num2) {
             System.out.println("num1 < num2");
-        }else if (num1 > num2){
+        } else if (num1 > num2) {
             System.out.println("num1 > num2");
-        }else System.out.println("num1 = num2");
+        } else {
+            System.out.println("num1 = num2");
+        }
     }
 }

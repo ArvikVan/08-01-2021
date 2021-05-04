@@ -1,6 +1,6 @@
 package com.company.thread;
 
-public class NewThread implements Runnable{
+public class NewThread implements Runnable {
     Thread t;
 
     NewThread() {
@@ -12,7 +12,7 @@ public class NewThread implements Runnable{
     @Override
     public void run() {
         try {
-            for (int i = 5; i > 0 ; i--) {
+            for (int i = 5; i > 0; i--) {
                 System.out.println("Дочерний поток: " + i);
                 Thread.sleep(500);
             }

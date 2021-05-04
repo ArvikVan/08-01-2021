@@ -65,6 +65,4 @@ public class SummingMethod {
                         .mapToInt(w -> w.getBalance())
                         .sum())));
     }
-
-
 }

@@ -1,6 +1,6 @@
 package com.company.bases.arrays;
 
-public class foreach {
+public class Foreach {
     public static int indexOf(int[] arr, int el) {
         int rst = -1;
         for (int index : arr) {

@@ -3,7 +3,7 @@ package com.company.loop;
 //n это делимое, d это делитель. Вам нужно не используя операцию %, найти остаток от деления.
 public class ModWithLoop {
     public static int mod(int n, int d) {
-        while ( n >= d) {
+        while (n >= d) {
             n = n - d;
             //System.out.println(delimoe);
 
@@ -19,7 +19,5 @@ public class ModWithLoop {
         ModWithLoop.mod(8, 3);
         ModWithLoop.mod(0, 3);
        /* ModWithLoop.mod(9, 4);*/
-
-
     }
 }

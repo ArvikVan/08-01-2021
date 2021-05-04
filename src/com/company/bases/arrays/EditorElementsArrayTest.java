@@ -14,6 +14,7 @@ public class EditorElementsArrayTest {
         int[][] expected = {{0, 5, 0}, {0, 1, 8}, {0, 3, 2}};
         assertThat(rsl, is(expected));
     }
+
     @Test
     public void changeDataTwo() {
         int[][] array = {{5}, {1, 4}, {-10, 18, 9}, {3, 2, 7, 11}};

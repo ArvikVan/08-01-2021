@@ -17,7 +17,7 @@ public class Converter {
                 count++;
             }
         }
-        int length = (int) (Math.ceil(Math.sqrt(tempArr.length/2)) +1);
+        int length = (int) (Math.ceil(Math.sqrt(tempArr.length / 2)) + 1);
         System.out.println(l);
         System.out.println(Arrays.toString(tempArr));
 

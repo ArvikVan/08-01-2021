@@ -7,7 +7,6 @@ public class AddElement {
     public static boolean addNewElement(List<String> list, String str) {
         List<String> check = new ArrayList<>(list);
         check.add(str);
-        if (check.size() > list.size());
-        return  true;
+        return check.size() <= list.size();
     }
 }

@@ -1,4 +1,4 @@
-package com.company.oop.classObj;
+/*package com.company.oop.classObj;
 
 public class ExFormulas {
     public static void main(String[] args) {
@@ -6,4 +6,4 @@ public class ExFormulas {
         vectorEx.vectorLength();
         System.out.println(vectorEx.vectorLength());
     }
-}
+}*/

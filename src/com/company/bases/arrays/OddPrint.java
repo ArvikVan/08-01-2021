@@ -4,9 +4,11 @@ package com.company.bases.arrays;
 // порядке возрастания их индексов. Для вывода использовать System.out.println()
 public class OddPrint {
     public static void print(int[] array) {
-        int N = array.length;
-        for (int i = 0; i < N; i++) {
-            if (array[i]%2 != 0) System.out.println(array[i]);
+        int n = array.length;
+        for (int i = 0; i < n; i++) {
+            if (array[i] % 2 != 0) {
+                System.out.println(array[i]);
+            }
         }
     }
 }

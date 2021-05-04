@@ -9,10 +9,14 @@ public class SumWithStopEl {
     public static int count(int[] data, int el) {
         int i = 0, sum = 0;
         for (int j = 0; j < data.length; j++) {
-            if (data[j] == el) break;
+            if (data[j] == el) {
+                break;
+            }
             sum += data[j];
-        } if (sum%2 == 0) {
+        } if (sum % 2 == 0) {
             return sum;
-        } else return 0;
+        } else {
+            return 0;
+        }
     }
 }

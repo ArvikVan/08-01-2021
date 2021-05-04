@@ -17,8 +17,8 @@ public class EvenPrintTest {
         EvenPrint.print(new int[] {1, 2, 3, 4});
         String ln = System.lineSeparator();
         assertThat(out.toString(), is(
-                "4" + ln +
-                        "2" + ln
+                "4" + ln
+                        + "2" + ln
         ));
     }
 

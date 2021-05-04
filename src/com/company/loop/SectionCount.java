@@ -8,7 +8,7 @@ package com.company.loop;
 public class SectionCount {
     public static int count(int length, int section) {
         int sch = 0;
-        while (length >= section){
+        while (length >= section) {
             length = length - section;
             sch++;
         }
@@ -17,6 +17,6 @@ public class SectionCount {
     }
 
     public static void main(String[] args) {
-        SectionCount.count(2,1);
+        SectionCount.count(2, 1);
     }
 }

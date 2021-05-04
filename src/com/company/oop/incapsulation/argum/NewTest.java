@@ -7,7 +7,8 @@ public class NewTest {
         this.a = i;
         this.b = j;
     }
-    void change(NewTest ob){
+
+    void change(NewTest ob) {
         ob.a = ob.a + ob.b;
         ob.b = -ob.b;
     }

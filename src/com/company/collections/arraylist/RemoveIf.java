@@ -4,7 +4,7 @@ import java.util.List;
 
 public class RemoveIf {
     public static List<String> sortList(List<String> list) {
-        list.removeIf(n-> n.length() < 5);
+        list.removeIf(n -> n.length() < 5);
         return list;
     }
 }

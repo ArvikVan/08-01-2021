@@ -1,8 +1,8 @@
 package com.company.bases.arrays;
 
-public class arrStair {
+public class ArrStair {
     public static void main(String[] args) {
-        int arr[][] = new int[4][];
+        int[][] arr = new int[4][];
         arr[0] = new int[1];
         arr[1] = new int[2];
         arr[2] = new int[3];

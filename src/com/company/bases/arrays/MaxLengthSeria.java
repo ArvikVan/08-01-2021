@@ -8,10 +8,14 @@ public class MaxLengthSeria {
         int count = 1;
         int result = 1;
         for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] <= array[i+1]) {
+            if (array[i] <= array[i + 1]) {
                 count++;
-                if (result < count) result = count;
-            } else count = 1;
+                if (result < count) {
+                    result = count;
+                }
+            } else {
+                count = 1;
+            }
         }
         return count;
     }

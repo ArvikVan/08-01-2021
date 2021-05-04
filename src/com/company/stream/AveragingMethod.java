@@ -49,10 +49,8 @@ public class AveragingMethod {
     public static Map<String, Double> averaging(List<Worker> workers) {
         return workers.stream()
                 .collect(Collectors.groupingBy(
-                        x -> x.getCompany().getName(),//находим сотрудников
+                        x -> x.getCompany().getName(), //находим сотрудников
                         Collectors.averagingDouble(Worker::getAge)//средний возраст
                 ));
     }
-
-
 }

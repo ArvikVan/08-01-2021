@@ -23,10 +23,10 @@ public class ArrayWithoutEvenElements {
         int countAr = 0;
         int[] array = new int[0];
         for (int i = 0; i < data.length; i++) {
-            if (data[i]%2 != 0) {
+            if (data[i] % 2 != 0) {
                 array = Arrays.copyOf(array, ++countAr);
                 array[countAr - 1] = data[i];
             }
-        }return array;
+        } return array;
     }
 }

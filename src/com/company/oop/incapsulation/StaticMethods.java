@@ -4,13 +4,15 @@ public class StaticMethods {
     private int id;
     private static int counter = 1;
 
-    StaticMethods(){
+    StaticMethods() {
         id = counter++;
     }
-    public static void displayCounter(){
+
+    public static void displayCounter() {
         System.out.printf("Counter : %d \n", counter);
     }
-    public void displayId(){
+
+    public void displayId() {
         System.out.printf("ID : %d \n", id);
     }
 

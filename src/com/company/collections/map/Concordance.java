@@ -14,9 +14,11 @@ public class Concordance {
         for (int i = 0; i < stringWithoutSpace.length(); i++) {
             char ch = stringWithoutSpace.charAt(i);
             List<Integer> list = new ArrayList<>();
-            for (int j = 0; j < stringWithoutSpace.length(); j++){
+            for (int j = 0; j < stringWithoutSpace.length(); j++) {
                 char insideCh = stringWithoutSpace.charAt(j);
-                if (insideCh == ch) list.add(j);
+                if (insideCh == ch) {
+                    list.add(j);
+                }
             }
             map.put(ch, list);
         }

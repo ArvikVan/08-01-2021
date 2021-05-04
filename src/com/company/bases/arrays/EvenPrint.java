@@ -5,9 +5,11 @@ package com.company.bases.arrays;
 //Например, для {1, 2, 3, 4} вывести 4, 2
 public class EvenPrint {
     public static void print(int[] array) {
-        int N = array.length;
+        int b = array.length;
         for (int i = array.length - 1; i >= 0; i--) {
-                if (array[i]%2 ==0) System.out.println(array[i]);
+                if (array[i] % 2 == 0) {
+                    System.out.println(array[i]);
+                }
         }
     }
 }

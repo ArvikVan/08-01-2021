@@ -8,10 +8,10 @@ public class ArraySort {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите размер массива");
         int i = scanner.nextInt();
-        int arr[] = new int[i];
+        int[] arr = new int[i];
 
-        for (int j = 0; j < arr.length-1; j++) {
-            arr[j] = (int) (j*Math.random()*10);
+        for (int j = 0; j < arr.length - 1; j++) {
+            arr[j] = (int) (j * Math.random() * 10);
             System.out.print(arr[j] + " ");
         }
         System.out.println();

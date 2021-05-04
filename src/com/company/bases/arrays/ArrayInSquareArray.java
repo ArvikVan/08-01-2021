@@ -7,8 +7,8 @@ package com.company.bases.arrays;
 public class ArrayInSquareArray {
     public static int[][] convertArray(int[] array) {
         int countCell = 0;
-        int length = (int) (Math.ceil(Math.sqrt(array.length/2)) +1);
-        int convertArr[][]= new int[length][length];
+        int length = (int) (Math.ceil(Math.sqrt(array.length / 2)) + 1);
+        int[][] convertArr = new int[length][length];
             for (int row = 0; row < convertArr.length; row++) {
                 for (int cell = 0; cell < convertArr.length; cell++, countCell++) {
                     if (countCell < array.length) {

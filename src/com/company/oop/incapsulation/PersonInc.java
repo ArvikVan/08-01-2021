@@ -22,7 +22,8 @@ public class PersonInc {
     }
 
     public void setAge(int age) {
-        if (age > 0 && age < 100)
-        this.age = age;
+        if (age > 0 && age < 100) {
+            this.age = age;
+        }
     }
 }

@@ -5,8 +5,10 @@ public class Sorted {
         boolean result = true;
         for (int i = 1; i < array.length; i++) {
             if (array[i - 1] < array[i]) {
-
-            } else return false;
+                result = true;
+            } else {
+                return false;
+            }
         }
         return result;
     }

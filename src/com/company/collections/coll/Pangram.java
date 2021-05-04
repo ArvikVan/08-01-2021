@@ -14,10 +14,6 @@ public class Pangram {
         HashSet<String> hashSet = new HashSet<>();
         hashSet.addAll(list);
         hashSet.remove(" ");
-        if (hashSet.size() == 26) {
-            return true;
-        } else {
-            return false;
-        }
+        return hashSet.size() == 26;
     }
 }

@@ -1,4 +1,4 @@
-package com.company.oop.linkedTypes;
+package com.company.oop.linkedtypes;
 
 public class Person2 implements Cloneable {
     private String name;
@@ -16,10 +16,12 @@ public class Person2 implements Cloneable {
     public void setAge(int age) {
         this.age = age;
     }
-    public void display(){
+
+    public void display() {
         System.out.printf("Person : %s \n", name);
     }
-    public Person2 clone() throws CloneNotSupportedException{
+
+    public Person2 clone() throws CloneNotSupportedException {
         return (Person2) super.clone();
     }
 }

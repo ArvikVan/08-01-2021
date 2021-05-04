@@ -16,11 +16,11 @@ public class ConsolInput {
         s.close();*/
         Scanner in = new Scanner(System.in);
         System.out.println("Input name: ");
-        String name = in.nextLine();//nextLine() отвечает за вывод строки
+        String name = in.nextLine(); //nextLine() отвечает за вывод строки
         System.out.println("Input age: ");
-        int age = in.nextInt();//nextInt() отвечает за вывод числа
+        int age = in.nextInt(); //nextInt() отвечает за вывод числа
         System.out.println("Input Height: ");
-        float h = in.nextFloat();//nextFloat() отвечает за вывод числа с плавающей точкой
+        float h = in.nextFloat(); //nextFloat() отвечает за вывод числа с плавающей точкой
         System.out.printf("Name: %s Age: %d Height: %.2f", name, age, h);
         in.close();
     }

@@ -7,7 +7,7 @@ import java.util.ListIterator;
 // 12. ListIterator для списка.
 public class ListIteratorUsage {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>(List.of("one" , "two", "three"));
+        List<String> list = new ArrayList<>(List.of("one", "two", "three"));
         ListIterator listIterator = list.listIterator();
         System.out.println("Start iterate...");
         while (listIterator.hasNext()) {

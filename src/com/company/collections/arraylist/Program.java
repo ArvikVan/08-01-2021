@@ -19,7 +19,9 @@ public class Program {
         for (String person:people) {
             System.out.print("| " + person + " ");
         }
-        if (people.contains("Elizabeth")) System.out.println("Arraylist contain Elizabeth! ");
+        if (people.contains("Elizabeth")) {
+            System.out.println("Arraylist contain Elizabeth! ");
+        }
         people.remove("Duck");
         people.remove(0);
         for (String person:people) {

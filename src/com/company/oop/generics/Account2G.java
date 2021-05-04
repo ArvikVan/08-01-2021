@@ -1,6 +1,6 @@
 package com.company.oop.generics;
 
-public class Account2G <T, S>{
+public class Account2G<T, S> {
     private T id;
     private S sum;
 

@@ -2,13 +2,13 @@ package com.company.loop;
 
 public class Cryptography {
     public static String code(String s) {
-        if (s.equals("")){
+        if (s.equals("")) {
             return "empty";
-        }else if((s.length() < 4) && (s.length() > 0)) {
+        } else if ((s.length() < 4) && (s.length() > 0)) {
             return s;
-        }else if (s.length() > 4){
+        } else if (s.length() > 4) {
             StringBuilder str = new StringBuilder(s);
-            for (int i = 0; i < str.length()-4; i++) {
+            for (int i = 0; i < str.length() - 4; i++) {
                 str.setCharAt(i, '#');
                 s = str.toString();
             }

@@ -9,8 +9,14 @@ package com.company.bases.arrays;
 //Для строки "abc", с номером вхождения 1, при поиске символа 'z', должно вернуться -1
 public class IndexOfWithCount {
     public static int indexOf(char[] string, char c, int number) {
+        int rls = -1;
         for (int i = 0; i < string.length; i++) {
-
+            if (string[i] == c) {
+                number--;
+            }
+            if (number == 0) {
+                return i;
+            }
         }
         return -1;
     }

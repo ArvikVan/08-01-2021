@@ -8,8 +8,8 @@ public class Validator {
                 count++;
             }
         }
-        System.out.println(count + " " + data.length/2);
-        if (count < data.length / 2){
+        System.out.println(count + " " + data.length / 2);
+        if (count < data.length / 2) {
             return true;
         }
         return false;

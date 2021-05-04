@@ -17,8 +17,8 @@ public class OddPrintTest {
         OddPrint.print(new int[] {1, 2, 3});
         String ln = System.lineSeparator();
         assertThat(out.toString(), is(
-                "1" + ln +
-                        "3" + ln
+                "1" + ln
+                        + "3" + ln
         ));
     }
 

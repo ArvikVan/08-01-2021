@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 
 public class PrintWriterDemo {
     public static void main(String[] args) {
-        PrintWriter pw = new PrintWriter(System.out, true);// поток ввода
+        PrintWriter pw = new PrintWriter(System.out, true); // поток ввода
         pw.println("This is a String ");
         int i = -845;
         pw.println(i);

@@ -1,8 +1,11 @@
-package com.company.oop.linkedTypes;
+/*
+package com.company.oop.linkedtypes;
+
+import com.company.oop.legasy.Person;
 
 public class Program {
     public static void main(String[] args) {
-        Person tom = new Person("Tom",39);
+        Person tom = new Person("Tom", 39);
         tom.display();
         Person bob = tom;
         bob.setName("Bob");
@@ -20,3 +23,4 @@ public class Program {
         }
     }
 }
+*/

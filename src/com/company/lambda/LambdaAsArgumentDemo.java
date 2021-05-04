@@ -3,7 +3,7 @@ package com.company.lambda;
 import java.util.Locale;
 
 public class LambdaAsArgumentDemo {
-    static String stringOp(StringFunc sf, String s){
+    static String stringOp(StringFunc sf, String s) {
         return sf.func(s);
     }
 
@@ -17,19 +17,19 @@ public class LambdaAsArgumentDemo {
 
         outStr = stringOp((str) -> {
             String result = "";
-            for (int i = 0; i <str.length() ; i++) {
+            for (int i = 0; i < str.length(); i++) {
                 if (str.charAt(i) != ' ') {
                     result += str.charAt(i);
                 }
-            }return result;
+            } return result;
         }, inStr);
         System.out.println("Это строка с удаленными пробелами: " + outStr);
 
-        StringFunc reverse = (str) ->{
+        StringFunc reverse = (str) -> {
             String result = "";
-            for (int i = str.length() -1; i >= 0 ; i--) {
+            for (int i = str.length() - 1; i >= 0; i--) {
                 result += str.charAt(i);
-            }return result;
+            } return result;
         };
         System.out.println("Это строка задомнаперед: " + stringOp(reverse, inStr));
     }

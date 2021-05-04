@@ -12,16 +12,20 @@ class Person {
         this.address = address;
         this.phone = phone;
     }
-    public void displayName(){
+
+    public void displayName() {
         System.out.printf("Name: %s \n", name);
     }
-    void displayAge(){
+
+    void displayAge() {
         System.out.printf("Age: %d \n", age);
     }
-    private void displayAddress(){
+
+    private void displayAddress() {
         System.out.printf("Address: %s \n", address);
     }
-    protected void displayPhone(){
+
+    protected void displayPhone() {
         System.out.printf("Phone: %s \n", phone);
     }
 }

@@ -1,7 +1,7 @@
 package com.company.lambda;
 
 public class MethodRefDemo {
-    static String stringOp(StringFunc sf, String s){
+    static String stringOp(StringFunc sf, String s) {
         return sf.func(s);
     }
 

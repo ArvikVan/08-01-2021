@@ -1,4 +1,4 @@
-package com.company.oop.classObj;
+package com.company.oop.classobj;
 
 public class VectorEx {
     private double x;
@@ -10,7 +10,8 @@ public class VectorEx {
         this.y = y;
         this.z = z;
     }
-    public double vectorLength(){
+
+    public double vectorLength() {
         return Math.sqrt(x * x + y * y + z * z);
     }
 }

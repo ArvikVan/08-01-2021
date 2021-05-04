@@ -6,8 +6,7 @@ public class HelloWorld {
         if (number % 3 == 0) {
             if ((number % 3) == 0 && (number % 5) == 0) {
                 result = "Hello, World!!!";
-            }
-            else {
+            } else {
                 result = "Hello";
             }
         } else {

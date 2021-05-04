@@ -12,9 +12,9 @@ public class BRReadLines {
         System.out.println("Input 'stop' for exit program ");
 
         do {
-            str = br.readLine();//Выводит строки
+            str = br.readLine(); //Выводит строки
             System.out.println(str + " ");
-        }while (!str.equals("stop"));
+        } while (!str.equals("stop"));
     }
 }
 //Input the lines of text.

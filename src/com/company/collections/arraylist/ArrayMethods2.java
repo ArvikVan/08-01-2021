@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayMethods2 {
-
-
     public static void main(String[] args) {
-        Student st1 = new Student("FirstStudentName", 'M',25, 1, 1.1);
+        Student st1 = new Student("FirstStudentName", 'M', 25, 1, 1.1);
         Student st2 = new Student("SecondStudentName", 'M', 26, 1, 1.2);
         Student st3 = new Student("ThirdStudentName", 'M', 27, 1, 1.3);
         Student st4 = new Student("ForthStudentName", 'M', 28, 1, 1.4);
@@ -22,11 +20,11 @@ public class ArrayMethods2 {
         for (Student st:studentList) {
             System.out.println(st);
         }
-        int studentIndex = studentList.indexOf(st2);//метод показывающий индекс
+        int studentIndex = studentList.indexOf(st2); //метод показывающий индекс
         System.out.println(studentIndex);
         System.out.println(studentList.contains(st2));
         //метод .toArray Перевод ArrayList  в обычный массив
-        Student[] StArr = studentList.toArray(new Student[0]);
-        System.out.println(Arrays.toString(StArr));
+        Student[] stArr = studentList.toArray(new Student[0]);
+        System.out.println(Arrays.toString(stArr));
     }
 }

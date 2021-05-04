@@ -17,8 +17,6 @@ public class Weather {
         for (String str : map.keySet()) {
             rsl.add(new Info(str, map.get(str)));
         }
-
-
         return rsl;
     }
 
@@ -49,8 +47,8 @@ public class Weather {
                 return false;
             }
             Info info = (Info) o;
-            return rainfall == info.rainfall &&
-                    Objects.equals(city, info.city);
+            return rainfall == info.rainfall
+                   && Objects.equals(city, info.city);
         }
 
         @Override

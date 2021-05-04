@@ -1,5 +1,5 @@
 package com.company.lambda;
 
-interface MyFuncG <T>{
+interface MyFuncG<T> {
     int func(T[] vals, T v);
 }

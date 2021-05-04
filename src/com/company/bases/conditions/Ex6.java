@@ -2,7 +2,7 @@ package com.company.bases.conditions;
 
 import java.util.Scanner;
 
-public class ex6 {
+public class Ex6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input first number: ");
@@ -13,7 +13,7 @@ public class ex6 {
         System.out.println("Введите номер операции : 1. Сложение, 2. Вычитание, 3. Умножение");
         int op = scanner.nextInt();
         int res = 0;
-        switch (op){
+        switch (op) {
             case 1:
                 res = num1 + num2;
                 break;

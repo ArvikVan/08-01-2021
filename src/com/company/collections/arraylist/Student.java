@@ -17,12 +17,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student { " +
-                "name = '" + name + '\'' +
-                ", sex = " + sex +
-                ", age = " + age +
-                ", course = " + course +
-                ", avgGrade = " + avgGrade +
-                '}';
+        return "Student { "
+                + "name = '" + name + '\''
+                + ", sex = " + sex
+                + ", age = " + age
+                + ", course = " + course
+                + ", avgGrade = " + avgGrade
+                + '}';
     }
 }

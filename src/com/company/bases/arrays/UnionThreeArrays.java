@@ -13,12 +13,12 @@ public class UnionThreeArrays {
     public static int[] union(int[] left, int[] middle, int[] right) {
         int[] result = new int[right.length + 1];
         result[0] = left[0];
-        result[result.length-1] = left[left.length-1];
-        for (int i = 2; i < middle.length; i+=2) {
-            result[i] = middle[i-1];
+        result[result.length - 1] = left[left.length - 1];
+        for (int i = 2; i < middle.length; i += 2) {
+            result[i] = middle[i - 1];
         }
-        for (int i = 1; i < right.length; i+=2) {
-            result[i] = right[i-1];
+        for (int i = 1; i < right.length; i += 2) {
+            result[i] = right[i - 1];
         }
         return result;
     }

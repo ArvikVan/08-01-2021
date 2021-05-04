@@ -8,7 +8,7 @@ public class GeomProgression {
         List<Integer> data = new ArrayList<>();
         int rsl = 0;
         for (int i = 1; i <= count; i++) {
-            int num = first * (int)Math.pow(denominator, i - 1);
+            int num = first * (int) Math.pow(denominator, i - 1);
             data.add(num);
         }
         for (int num : data) {

@@ -14,11 +14,11 @@ public class ArrayMax {
             arr[i] = scanner.nextInt();
         }
         int indexmax = 0; //переменная для хранения индекса максимлаьного значения
-        int max = arr[0];//переменная для храниния макс.значения
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] > max){
+        int max = arr[0]; //переменная для храниния макс.значения
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
                 max = arr[i];
-                indexmax = i ;
+                indexmax = i;
             }
         }
         System.out.printf("Max element is %d with index %d", max, indexmax);

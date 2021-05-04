@@ -15,7 +15,7 @@ public class SubList {
             }
         }
         if (!list.contains(el) && count <= 1) {
-            return list.subList(0,0);
+            return list.subList(0, 0);
         } else {
             return list.subList(list.indexOf(el), list.lastIndexOf(el));
         }

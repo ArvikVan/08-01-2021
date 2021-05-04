@@ -16,7 +16,7 @@ public class NonUniqueString {
         boolean b = true;
         for (String stringToMap : strings) {
             map.computeIfAbsent(stringToMap, value -> true);
-            map.computeIfPresent(stringToMap, (key, value) -> value == false);
+            map.computeIfPresent(stringToMap, (key, value) -> !value);
         }
         return map;
     }

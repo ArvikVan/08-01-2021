@@ -9,9 +9,9 @@ public class AddIndexElement {
         List<String> check = new ArrayList<>();
         if (!list.contains(str)) {
             list.add(index, str);
-        } else return false;
-        if (check.size() < list.size()) {
-            return true;
-        } return false;
+        } else {
+            return false;
+        }
+        return 0 < list.size();
     }
 }

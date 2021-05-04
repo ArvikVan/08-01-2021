@@ -12,11 +12,12 @@ public class TwoSquareArrays {
         int count = 0;
         for (int i = 0; i < left.length; i++) {
             for (int j = 0; j < left.length; j++) {
-                if (left[i][j] < right[i][j]){
+                if (left[i][j] < right[i][j]) {
                     collectMax[count] = right[i][j];
                 } else {
                     collectMax[count] = left[i][j];
-                } count++;
+                }
+                count++;
             }
         }
         return collectMax;
