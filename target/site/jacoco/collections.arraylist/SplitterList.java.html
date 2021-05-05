@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SplitterList.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">HOME</a> &gt; <a href="index.source.html" class="el_package">collections.arraylist</a> &gt; <span class="el_source">SplitterList.java</span></div><h1>SplitterList.java</h1><pre class="source lang-java linenums">package collections.arraylist;
+//8. Удаление одного списка из другого
+//1. Общий список элементов;
+//2. Список важных элементов, но не обязательных;
+//3. Список элементов, которые обязательно должны отсутствовать в результирующем списке.
+//Необходимо реализовать метод, который вернет список, основой которого будет первый,
+// присутствовать элементы из второго и точно отсутствовать элементы из третьего.
+// Используйте методы о которых говорилось выше.
+//boolean removeAll (Collection&lt;?&gt; col) - метод удаляет из списка все элементы, которые содержатся в коллекции col,
+// если в результате работы метода исходный список изменился - метод возвращает true.
+//boolean retainAll (Collection&lt;?&gt; col) - метод также удаляет элементы из списка, за исключением тех, которые
+// находятся в коллекции col, если в результате работы метода исходный список изменился - метод возвращает true.
+import java.util.List;
+
+<span class="nc" id="L15">public class SplitterList {</span>
+    public static List&lt;String&gt; split(List&lt;String&gt; left, List&lt;String&gt; middle, List&lt;String&gt; right) {
+<span class="fc" id="L17">        left.removeAll(right);</span>
+<span class="fc" id="L18">        left.retainAll(middle);</span>
+<span class="fc" id="L19">        return left;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

@@ -1,3 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/AddIndexElement.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/AddElement.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/CreatorNewList.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/SplitterList.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/ArrayMethods3.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/ArrayListMethods1.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/GeomProgression.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/ArProgression.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/Factory.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/ArrayMethods2.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/UniqueElement.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/RemoveIf.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/SubList.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/Student.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/IteratorForList.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/Alphabet.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/RepositionElement.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/Program.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/main/java/collections/arraylist/ListIteratorUsage.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/IteratorForListTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/ArProgressionTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/RemoveIfTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/CreatorNewListTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/AddElementTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/SubListTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/AddIndexElementTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/FactoryTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/GeomProgressionTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/SplitterListTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/UniqueElementTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/ListIteratorUsageTest.java">
+</file>
+<file name="/home/arvik/IdeaProjects/08-01-2021/src/test/java/RepositionElementTest.java">
+</file>
 </checkstyle>

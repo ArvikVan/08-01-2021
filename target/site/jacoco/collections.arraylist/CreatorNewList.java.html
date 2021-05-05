@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreatorNewList.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">HOME</a> &gt; <a href="index.source.html" class="el_package">collections.arraylist</a> &gt; <span class="el_source">CreatorNewList.java</span></div><h1>CreatorNewList.java</h1><pre class="source lang-java linenums">package collections.arraylist;
+// 13. Создание списка.
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L7">public class CreatorNewList {</span>
+    public static void main(String[] args) {
+<span class="fc" id="L9">        System.out.println(&quot;Создаем список с пустым конструктором.&quot;);</span>
+<span class="fc" id="L10">        List&lt;String&gt; first = new ArrayList&lt;&gt;(3);</span>
+<span class="fc" id="L11">        System.out.println(&quot;Добавляем 3 элемента в список.&quot;);</span>
+<span class="fc" id="L12">        first.add(&quot;one&quot;);</span>
+<span class="fc" id="L13">        first.add(&quot;two&quot;);</span>
+<span class="fc" id="L14">        first.add(&quot;three&quot;);</span>
+<span class="fc" id="L15">        System.out.println(&quot;Создаем список - в конструктор передаем коллекцию.&quot;);</span>
+<span class="fc" id="L16">        List&lt;String&gt; second = new ArrayList&lt;&gt;(first);</span>
+<span class="fc" id="L17">        System.out.println(&quot;Выводим все элементы в списке.&quot;);</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        for (String list : second) {</span>
+<span class="fc" id="L19">            System.out.println(list);</span>
+<span class="fc" id="L20">        }</span>
+<span class="fc" id="L21">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
