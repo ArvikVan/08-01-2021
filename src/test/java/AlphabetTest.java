@@ -1,4 +1,4 @@
-import com.company.collections.arraylist.Alphabet;
+import collections.arraylist.Alphabet;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
