@@ -3,7 +3,8 @@ package io;
  * класс описывает копирование фала firstCopyFile в secondCopyFile
  * копируется содержимое
  * @author arvik
- * @version 1.0
+ * @version 1.1
+ * используем try with resourses
  */
 
 import java.io.FileInputStream;
@@ -14,19 +15,15 @@ import java.io.IOException;
 public class CopyFile {
     public static void main(String[] args) {
         int i;
-        FileInputStream fin = null;
-        FileOutputStream fout = null;
-
         //проверяем что указали оба имени
         if (args.length != 2) {
             System.out.println("Испольщование CopyFile in out");
             return;
         }
         //copyfile
-        try {
+        try (FileInputStream fin = new FileInputStream(args[0]);
+             FileOutputStream fout = new FileOutputStream(args[1])) {
             //openfile
-            fin = new FileInputStream(args[0]);
-            fout = new FileOutputStream(args[1]);
             do {
                 i = fin.read();
                 if (i != -1) {
@@ -35,21 +32,6 @@ public class CopyFile {
             } while (i != -1);
         } catch (IOException e) {
             System.out.println("ошибка ввода - вывода" + e);
-        } finally {
-            try {
-                if (fin != null) {
-                    fin.close();
-                }
-            } catch (IOException e2) {
-                System.out.println("ошибка закрытия файла ввода ");
-            }
-            try {
-                if (fout != null) {
-                    fout.close();
-                }
-            } catch (IOException e2) {
-                System.out.println("Ошибка закрытия файла вывода ");
-            }
         }
     }
 }
