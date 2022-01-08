@@ -4,8 +4,16 @@
 
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
-    <servlet-mapping>
+    <servlet>
+        <servlet-name>first-jsp</servlet-name>
+        <jsp-file>/test-servlet</jsp-file>
+    </servlet>
+   <!-- <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/*</url-pattern>
+    </servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>first-jsp</servlet-name>
+        <url-pattern>/first-jsp</url-pattern>
     </servlet-mapping>
 </web-app>

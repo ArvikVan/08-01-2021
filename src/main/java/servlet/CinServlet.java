@@ -17,18 +17,6 @@ import java.util.stream.Collectors;
  */
 @WebServlet(urlPatterns = {"/cinema", "/cinema/*"})
 public class CinServlet extends HttpServlet {
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        log("Method INIT() STARTING");
-    }
-
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write("METHOD SERVICE() START\n");
-        super.service(req, resp);
-        resp.getWriter().write("METHOD SERVICE() EXIT\n");
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
