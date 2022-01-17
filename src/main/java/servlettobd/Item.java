@@ -1,6 +1,10 @@
 package servlettobd;
 
+import servlettobd.servlet.Category;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -16,25 +20,19 @@ public class Item {
     private int id;
     private String name;
     private String pass;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<servlettobd.servlet.Category> categories = new ArrayList<>();
 
     public Item() {
     }
 
-    public Item(String name) {
+    public Item(String name, List<Category> categories) {
         this.name = name;
+        this.categories = categories;
     }
 
-    public Item(String name, String pass) {
-        this.name = name;
-        this.pass = pass;
-    }
-
-    public String getPass() {
-        return pass;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void addCategory(Category category) {
+        this.categories.add(category);
     }
 
     public int getId() {
@@ -51,6 +49,22 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 
     @Override

@@ -6,6 +6,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import java.util.List;
+
 /**
  * @author ArvikV
  * @version 1.0
@@ -63,5 +65,15 @@ public class BdStore implements Store, AutoCloseable {
         session.delete(item);
         session.getTransaction().commit();
         session.close();
+    }
+
+    @Override
+    public List<Item> findAll() {
+        Session session = sf.openSession();
+        session.beginTransaction();
+        List result = session.createQuery("from Item").list();
+        session.getTransaction().commit();
+        session.close();
+        return result;
     }
 }

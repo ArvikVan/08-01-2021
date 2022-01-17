@@ -11,10 +11,16 @@
     <title>index-page</title>
 </head>
 <body>
-<form name="test" method="get" action="ItemServlet">
+<form name="test" method="get" action="/08_01_2021/ItemServlet">
     <p><b>Ваше имя:</b><br>
         <input type="text" name = "name" size="40">
-        <input type="text" name = "password" size="40">
+    <p><label for="cat">Выберите модель:</label>
+    <select multiple id="cat" name="cat">
+        <option value="iphone 6s">iPhone 6S</option>
+        <option value="lumia 950">Lumia 950</option>
+        <option value="nexus 5x">Nexus 5X</option>
+        <option value="galaxy s7">Galaxy S7</option>
+    </select></p>
     </p>
     <p><input type="submit" value="Отправить">
         <input type="reset" value="Очистить"></p>

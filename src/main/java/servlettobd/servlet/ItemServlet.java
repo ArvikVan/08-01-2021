@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 @WebServlet(name = "ItemServlet", value = "/ItemServlet")
 public class ItemServlet extends HttpServlet {
@@ -24,18 +25,23 @@ public class ItemServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String name = request.getParameter("name");
-        String pass = request.getParameter("password");
-        BdStore.instOf().addToBd(new Item(name, pass));
+        String json = GSON.toJson(BdStore.instOf().findAll());
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setContentType("application/json; charset=utf-8");
+        OutputStream output = response.getOutputStream();
+        output.write(json.getBytes(StandardCharsets.UTF_8));
+        output.flush();
+        output.close();
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Item item = GSON.fromJson(request.getReader(), Item.class);
+        item.addCategory((Category) request.getAttribute("cat"));
         int id = Integer.parseInt(request.getParameter("id"));
-        Item item = BdStore.instOf().findById(id);
-        BdStore.instOf().deleteItem(item, id);
+        BdStore.instOf().addToBd(item);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }

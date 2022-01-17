@@ -8,6 +8,6 @@ package servlettobd;
 public class ConnectionToBd {
     public static void main(String[] args) {
         Store store = BdStore.instOf();
-        store.addToBd(new Item("Ivan", "Password"));
+        store.addToBd(new Item());
     }
 }

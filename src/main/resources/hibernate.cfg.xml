@@ -19,5 +19,6 @@
         <property name="use_sql_comments">true</property>
 
         <mapping class="servlettobd.Item" />
+        <mapping class="servlettobd.servlet.Category" />
     </session-factory>
 </hibernate-configuration>

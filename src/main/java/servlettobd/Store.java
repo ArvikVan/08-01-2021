@@ -1,5 +1,7 @@
 package servlettobd;
 
+import java.util.List;
+
 /**
  * @author ArvikV
  * @version 1.0
@@ -11,4 +13,6 @@ public interface Store {
     Item findById(int id);
 
     void deleteItem(Item item, int id);
+
+    List<Item> findAll();
 }
