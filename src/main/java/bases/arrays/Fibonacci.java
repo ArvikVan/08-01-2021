@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 
 public class Fibonacci {
     public static boolean checkArray(int[] data) {

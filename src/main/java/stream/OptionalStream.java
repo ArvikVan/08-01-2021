@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * найти тел. номера пользователя с заданным id, которые начинаются с region
  * @author arviy

@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 //Дано целое число n (> 0). Нужно вывести делители числа.
 //Делитель это число на которое делится заданное число
 public class Multipliers {

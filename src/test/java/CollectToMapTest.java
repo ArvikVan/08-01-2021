@@ -1,4 +1,4 @@
-import com.company.stream.CollectToMap;
+import stream.CollectToMap;
 import org.junit.Test;
 
 import java.util.List;

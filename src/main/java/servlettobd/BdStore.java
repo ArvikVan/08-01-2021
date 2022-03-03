@@ -5,7 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import servlettobd.servlet.Category;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -75,5 +77,20 @@ public class BdStore implements Store, AutoCloseable {
         session.getTransaction().commit();
         session.close();
         return result;
+    }
+
+    @Override
+    public List<Category> findAllCategory() {
+        List<Category> rsl = new ArrayList<>();
+        try (Session session = sf.openSession()) {
+            session.beginTransaction();
+
+            rsl = session.createQuery("from Category", Category.class).list();
+
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            sf.getCurrentSession().getTransaction().rollback();
+        }
+        return rsl;
     }
 }

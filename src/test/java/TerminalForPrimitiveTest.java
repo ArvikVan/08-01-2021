@@ -1,4 +1,4 @@
-import com.company.stream.TerminalForPrimitive;
+import stream.TerminalForPrimitive;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

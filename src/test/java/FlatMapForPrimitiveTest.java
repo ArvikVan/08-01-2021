@@ -1,4 +1,4 @@
-import com.company.stream.FlatMapForPrimitive;
+import stream.FlatMapForPrimitive;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

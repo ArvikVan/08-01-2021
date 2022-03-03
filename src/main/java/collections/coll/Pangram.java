@@ -1,4 +1,4 @@
-package com.company.collections.coll;
+package collections.coll;
 // 3. Панграмма
 import java.util.ArrayList;
 import java.util.HashSet;

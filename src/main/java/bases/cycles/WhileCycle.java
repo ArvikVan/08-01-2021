@@ -1,4 +1,4 @@
-package com.company.bases.cycles;
+package bases.cycles;
 
 public class WhileCycle {
     public static void main(String[] args) {

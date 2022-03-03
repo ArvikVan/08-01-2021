@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**В Stream есть метод reduce(BinaryOperator<T> operator).
  * Этот метод находит первый элемент стрима, он становится результатом,
  * а потом уже начинает применять оператор к последующим элементам.

@@ -1,4 +1,4 @@
-package com.company.bases.cycles;
+package bases.cycles;
 
 import javax.imageio.plugins.tiff.TIFFImageReadParam;
 

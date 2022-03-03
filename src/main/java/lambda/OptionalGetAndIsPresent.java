@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 /**
  * 1. Написать метод indexOf(). Он ищет индекс по значению.
  * Если индекс не найден, должно вернуться Optional.empty().

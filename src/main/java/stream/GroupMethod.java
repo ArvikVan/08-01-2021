@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 
 import java.util.List;
 import java.util.Map;

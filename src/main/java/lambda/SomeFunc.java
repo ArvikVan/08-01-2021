@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public interface SomeFunc<T> {
     T func(T t);

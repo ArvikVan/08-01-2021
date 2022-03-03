@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 // 17. Транспонировать матрицу
 public class Transposition {
     public static int[][] convert(int[][] matrix) {

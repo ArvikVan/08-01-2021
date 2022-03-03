@@ -1,4 +1,4 @@
-package com.company.condition;
+package condition;
 
 public class WeeklySalary {
     public static int calculate(int[] hours) {

@@ -1,4 +1,4 @@
-package com.company.collections.map;
+package collections.map;
 // 8. Объединение значений в Map.
 import java.util.List;
 import java.util.Map;

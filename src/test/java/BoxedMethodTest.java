@@ -1,4 +1,4 @@
-import com.company.stream.BoxedMethod;
+import stream.BoxedMethod;
 import org.junit.Test;
 
 import java.util.List;

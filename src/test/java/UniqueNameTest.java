@@ -1,5 +1,5 @@
-import com.company.collections.coll.UniqueName;
-import com.company.collections.coll.User;
+import collections.coll.UniqueName;
+import collections.coll.User;
 import org.junit.Test;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class UniqueNameTest {
     @Test
     public void collectUniqueName() {
-        List<com.company.collections.coll.User> users = List.of(
+        List<collections.coll.User> users = List.of(
                 new User(1, "name1"),
                 new User(2, "name2"),
                 new User(3, "name1"),

@@ -1,4 +1,4 @@
-import com.company.stream.FilterNumbers;
+import stream.FilterNumbers;
 import org.junit.Test;
 
 import java.util.List;

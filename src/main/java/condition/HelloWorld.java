@@ -1,4 +1,4 @@
-package com.company.condition;
+package condition;
 
 public class HelloWorld {
     public static String checkNumber(int number) {

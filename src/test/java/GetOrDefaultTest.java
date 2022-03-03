@@ -1,4 +1,4 @@
-import com.company.collections.map.GetOrDefault;
+import collections.map.GetOrDefault;
 import org.junit.Test;
 
 import java.util.ArrayList;

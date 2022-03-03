@@ -1,4 +1,4 @@
-package com.company.collections.coll;
+package collections.coll;
 // 2. Итератор для Set.
 //Iterator<E> iterator() - метод возвращает объект Iterator, который позволяет обойти весь набор значений.
 //boolean hasNext() - метод проверяет существует ли следующий элемент в наборе.

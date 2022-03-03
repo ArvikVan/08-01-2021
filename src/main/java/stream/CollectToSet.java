@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Для того чтобы собрать данные в сет, мы можем использовать методы collect() и Collectors.toSet().
  * Сборка идет в HashSet

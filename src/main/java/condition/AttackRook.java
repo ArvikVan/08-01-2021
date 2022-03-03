@@ -1,4 +1,4 @@
-package com.company.condition;
+package condition;
 
 public class AttackRook {
     public static boolean check(String left, String right) {

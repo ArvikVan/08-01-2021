@@ -1,4 +1,4 @@
-import com.company.collections.coll.Jackpot;
+import collections.coll.Jackpot;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

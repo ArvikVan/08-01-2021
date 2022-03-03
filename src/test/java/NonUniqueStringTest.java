@@ -1,4 +1,4 @@
-import com.company.collections.map.NonUniqueString;
+import collections.map.NonUniqueString;
 import org.junit.Test;
 
 import java.util.Map;

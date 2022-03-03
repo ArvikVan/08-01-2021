@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 //9.5. Сумма цифр
 //
 //Дано число, нужно получить сумму его цифр

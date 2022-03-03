@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Для того чтобы собрать данные в мапу, мы можем использовать методы collect() и Collectors.toMap().
  * Сборка идет в HashMap

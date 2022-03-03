@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 //27. Привести строку к верхнему регистру
 public class UpperCase {
     public static char[] toUpperCase(char[] string) {

@@ -1,4 +1,4 @@
-import com.company.collections.map.Concordance;
+import collections.map.Concordance;
 import org.junit.Test;
 
 import java.util.List;

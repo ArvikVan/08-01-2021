@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 class MyStringOps {
     static String strReverse(String str) {

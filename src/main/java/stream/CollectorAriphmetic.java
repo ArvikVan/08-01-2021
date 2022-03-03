@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Ваша задача дописать метод, чтобы он умножал элементы списка
  * @author arviy

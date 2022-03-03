@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 // 26. Получить правую диагональ квадратного массива
 public class RightDiagonal {
     public static int[] diagonal(int[][] data) {

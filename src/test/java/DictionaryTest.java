@@ -1,4 +1,4 @@
-import com.company.collections.map.Dictionary;
+import collections.map.Dictionary;
 import org.junit.Test;
 
 import java.util.List;

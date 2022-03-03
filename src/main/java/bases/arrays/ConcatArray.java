@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 
 public class ConcatArray {
     public static int combineSize(int[] a, int[] b) {

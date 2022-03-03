@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public class LambdaExceptionDemo {
     public static void main(String[] args) throws EmptyArrayException {

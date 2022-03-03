@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 // 1. Проверить сортировку массива
 public class Sorted {
     public static boolean isSorted(int[] array) {

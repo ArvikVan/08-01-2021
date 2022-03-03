@@ -1,4 +1,4 @@
-import com.company.collections.map.Farm;
+import collections.map.Farm;
 import org.junit.Test;
 
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-import static com.company.collections.map.Farm.Animal;
+import static collections.map.Farm.Animal;
 public class FarmTest {
     @Test
     public void sumLegs() {

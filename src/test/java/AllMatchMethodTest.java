@@ -1,4 +1,4 @@
-import com.company.stream.AllMatchMethod;
+import stream.AllMatchMethod;
 import org.junit.Test;
 
 import java.util.List;

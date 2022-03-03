@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 //Дано целое число a и целое число degree (> 0).
 //Найти a в степени degree: a^degree = a·a· . . . ·a (числа a перемножаются degree раз).
 public class DegreeLoop {

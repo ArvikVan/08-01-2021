@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 //Выведите на консоль числа от N до 0. N не входит. В этом упражнении используйте цикл for c index
 public class PrintNTo0 {
     public static void out(int n) {

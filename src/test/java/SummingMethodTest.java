@@ -1,11 +1,11 @@
-import com.company.stream.SummingMethod;
+import stream.SummingMethod;
 import org.junit.Test;
 
 import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.*;
-import static com.company.stream.SummingMethod.*;
+import static stream.SummingMethod.*;
 
 public class SummingMethodTest {
 

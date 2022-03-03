@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 
 public class SwapCols {
     public static void swap(int[][] data, int src, int dst) {

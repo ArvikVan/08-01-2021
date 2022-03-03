@@ -1,4 +1,4 @@
-import com.company.stream.MapToIntMethod;
+import stream.MapToIntMethod;
 import org.junit.Test;
 
 import java.util.List;

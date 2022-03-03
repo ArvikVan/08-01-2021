@@ -1,4 +1,4 @@
-package com.company.func;
+package func;
 /**
  * 1.1. Predicate. Проверить, что число положительное
  */

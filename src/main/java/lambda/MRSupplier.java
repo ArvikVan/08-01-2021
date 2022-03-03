@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 /**
  * вернуть Supplier, который создает пустую строку через new
  * @author arviy

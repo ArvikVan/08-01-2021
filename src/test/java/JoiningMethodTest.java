@@ -1,4 +1,4 @@
-import com.company.stream.JoiningMethod;
+import stream.JoiningMethod;
 import org.junit.Test;
 
 import java.util.List;

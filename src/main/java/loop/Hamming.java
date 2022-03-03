@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 
 public class Hamming {
     public static int checkStrings(String left, String right) {

@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public interface MyNumber {
     double getValue();

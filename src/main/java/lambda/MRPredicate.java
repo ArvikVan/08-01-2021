@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 /**
  * класс описывает предикат который проверяет что строка пустая
  * @author arviy

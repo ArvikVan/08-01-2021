@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * min(), max() возвращают OptionalInt, для получения элемента нужно использовать метод getAsInt()
  *

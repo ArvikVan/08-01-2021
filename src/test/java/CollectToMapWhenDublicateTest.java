@@ -1,4 +1,4 @@
-import com.company.stream.CollectToMapWhenDublicate;
+import stream.CollectToMapWhenDublicate;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-import com.company.stream.OptionalFlatMap;
+import stream.OptionalFlatMap;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Дан исходный список. Получить список БЕЗ элементов, кратных 4, из исходного списка.
  * @author arviy

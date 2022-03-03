@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Ваша задача найти первую строку, которая кончается на ".java" и вернуть Optional из длины этой строки
  * @author arviy

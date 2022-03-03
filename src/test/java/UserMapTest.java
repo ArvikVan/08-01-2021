@@ -4,7 +4,7 @@
  * @version 1.0
  */
 
-import com.company.stream.UserMap;
+import stream.UserMap;
 import org.junit.Test;
 
 import java.util.Iterator;

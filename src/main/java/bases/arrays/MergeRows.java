@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 // 25. Объединить строки квадратного массива
 public class MergeRows {
     public static int[] merge(int[][] data) {

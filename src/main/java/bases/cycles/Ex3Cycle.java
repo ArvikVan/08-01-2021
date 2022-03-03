@@ -1,4 +1,4 @@
-package com.company.bases.cycles;
+package bases.cycles;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-import com.company.stream.DistinctForPrimitive;
+import stream.DistinctForPrimitive;
 import org.junit.Test;
 
 import java.util.List;

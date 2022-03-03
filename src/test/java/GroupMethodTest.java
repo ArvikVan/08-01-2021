@@ -1,4 +1,4 @@
-import com.company.stream.GroupMethod;
+import stream.GroupMethod;
 import org.junit.Test;
 
 import java.util.List;

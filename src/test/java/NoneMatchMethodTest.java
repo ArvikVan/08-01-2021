@@ -1,4 +1,4 @@
-import com.company.stream.NoneMatchMethod;
+import stream.NoneMatchMethod;
 import org.junit.Test;
 
 import java.util.List;

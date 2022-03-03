@@ -1,4 +1,4 @@
-import com.company.collections.map.Merge;
+import collections.map.Merge;
 import org.junit.Test;
 
 import java.util.HashMap;

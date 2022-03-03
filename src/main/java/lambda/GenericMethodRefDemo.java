@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public class GenericMethodRefDemo {
     static <T> int myOp(MyFuncG<T> f, T[] vals, T v) {

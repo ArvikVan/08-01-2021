@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 
 public class Abbreviation {
     public static String collect(String s) {

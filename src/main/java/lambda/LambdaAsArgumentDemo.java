@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 import java.util.Locale;
 

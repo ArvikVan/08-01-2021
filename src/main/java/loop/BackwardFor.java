@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 //Нужно вывести числа от M до N. N не включено. M > N.
 public class BackwardFor {
     public static void out(int m, int n) {

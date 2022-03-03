@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 /**
  * класс описывает работу лямбды как ссылки на метод
  * @author arviy

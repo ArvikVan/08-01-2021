@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public class MyArrayOps {
     static <T> int countMatching(T[] vals, T v) {

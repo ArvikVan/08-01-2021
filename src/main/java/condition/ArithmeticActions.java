@@ -1,4 +1,4 @@
-package com.company.condition;
+package condition;
 
 public class ArithmeticActions {
     public static String selectAction(int left, int right, int rsl) {

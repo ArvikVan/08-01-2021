@@ -1,4 +1,4 @@
-import com.company.collections.map.MostUsedCharacter;
+import collections.map.MostUsedCharacter;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

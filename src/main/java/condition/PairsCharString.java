@@ -1,4 +1,4 @@
-package com.company.condition;
+package condition;
 
 public class PairsCharString {
     public static boolean check(String l, String r) {

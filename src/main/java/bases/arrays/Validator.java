@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 //33. Проверка массива на уникальность элементов.
 public class Validator {
     public static boolean checkArray(int[] data, int value) {

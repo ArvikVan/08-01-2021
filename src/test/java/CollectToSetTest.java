@@ -1,4 +1,4 @@
-import com.company.stream.CollectToSet;
+import stream.CollectToSet;
 import org.junit.Test;
 
 import java.util.Set;

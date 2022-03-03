@@ -1,4 +1,4 @@
-import com.company.collections.map.RemoveElements;
+import collections.map.RemoveElements;
 import org.junit.Test;
 
 import java.util.HashMap;

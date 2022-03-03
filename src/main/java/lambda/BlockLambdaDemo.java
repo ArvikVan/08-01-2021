@@ -1,8 +1,8 @@
-package com.company.lambda;
+package lambda;
 
 public class BlockLambdaDemo {
     public static void main(String[] args) {
-        NumericFunc factorial = (n) -> {
+        lambda.NumericFunc factorial = (n) -> {
             int result = 1;
             for (int i = 1; i <= n; i++) {
                 result = i * result;

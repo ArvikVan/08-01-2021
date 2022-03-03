@@ -1,4 +1,4 @@
-package com.company.bases;
+package bases;
 
 import java.util.Scanner;
 

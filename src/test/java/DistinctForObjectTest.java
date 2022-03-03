@@ -1,4 +1,4 @@
-import com.company.stream.DistinctForObject;
+import stream.DistinctForObject;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-import com.company.stream.CollectorClass;
+import stream.CollectorClass;
 import org.junit.Test;
 
 import java.util.List;

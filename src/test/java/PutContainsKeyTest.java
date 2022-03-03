@@ -1,5 +1,5 @@
-import com.company.collections.map.PutContainsKey;
-import com.company.collections.map.User;
+import collections.map.PutContainsKey;
+import collections.map.User;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

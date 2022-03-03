@@ -1,5 +1,5 @@
-import com.company.collections.map.PutIfAbsent.User;
-import com.company.collections.map.PutIfAbsent;
+import collections.map.PutIfAbsent.User;
+import collections.map.PutIfAbsent;
 import org.junit.Test;
 
 import java.util.HashMap;

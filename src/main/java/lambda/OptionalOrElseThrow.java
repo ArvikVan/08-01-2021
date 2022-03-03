@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 /**
  * написать метод поиска пользователя по логину. Если ничего не найдено, то нужно вернуть исключение
  * @author arviy

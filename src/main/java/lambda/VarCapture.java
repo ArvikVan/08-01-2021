@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public class VarCapture {
     public static void main(String[] args) {

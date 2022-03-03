@@ -1,11 +1,11 @@
-import com.company.stream.AveragingMethod;
+import stream.AveragingMethod;
 import org.junit.Test;
 
 import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.*;
-import static com.company.stream.AveragingMethod.*;
+import static stream.AveragingMethod.*;
 
 public class AveragingMethodTest {
 

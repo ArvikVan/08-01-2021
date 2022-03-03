@@ -1,4 +1,4 @@
-import com.company.stream.StreamBuilder;
+import stream.StreamBuilder;
 import org.junit.Test;
 
 import java.util.List;

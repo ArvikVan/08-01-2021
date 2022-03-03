@@ -1,4 +1,4 @@
-import com.company.collections.coll.Isogram;
+import collections.coll.Isogram;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

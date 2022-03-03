@@ -1,4 +1,4 @@
-package com.company.lambda;
+package lambda;
 
 public class MethodRefDemo {
     static String stringOp(StringFunc sf, String s) {

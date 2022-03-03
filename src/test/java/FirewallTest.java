@@ -1,4 +1,4 @@
-import com.company.collections.coll.Firewall;
+import collections.coll.Firewall;
 import org.junit.Test;
 
 import java.util.Set;

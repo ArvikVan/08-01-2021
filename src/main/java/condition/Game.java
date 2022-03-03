@@ -1,4 +1,4 @@
-package com.company.condition;
+package condition;
 
 public class Game {
     public static double checkGame(double percent, int prize, int pay) {

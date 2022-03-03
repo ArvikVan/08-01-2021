@@ -1,11 +1,11 @@
-import com.company.stream.OptionalStream;
+import stream.OptionalStream;
 import org.junit.Test;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
-import static com.company.stream.OptionalStream.*;
+import static stream.OptionalStream.*;
 
 public class OptionalStreamTest {
 

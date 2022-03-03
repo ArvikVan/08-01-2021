@@ -1,4 +1,4 @@
-package com.company.bases.cycles;
+package bases.cycles;
 
 public class DoCycle2 {
     public static void main(String[] args) {

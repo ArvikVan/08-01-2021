@@ -1,4 +1,4 @@
-import com.company.collections.map.KeySet;
+import collections.map.KeySet;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

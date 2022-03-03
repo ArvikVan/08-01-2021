@@ -1,4 +1,4 @@
-package com.company.bases.arrays;
+package bases.arrays;
 
 public class Foreach {
     public static int indexOf(int[] arr, int el) {

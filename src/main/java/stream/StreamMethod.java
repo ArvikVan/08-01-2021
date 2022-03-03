@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Ниже, приведен код. Создайте стрим из переданной коллекции
  * @author arviy

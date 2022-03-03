@@ -1,5 +1,7 @@
 package servlettobd;
 
+import servlettobd.servlet.Category;
+
 import java.util.List;
 
 /**
@@ -15,4 +17,6 @@ public interface Store {
     void deleteItem(Item item, int id);
 
     List<Item> findAll();
+
+    public List<Category> findAllCategory();
 }

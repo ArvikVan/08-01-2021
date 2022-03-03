@@ -1,10 +1,10 @@
-import com.company.stream.OptionalFilter;
+import stream.OptionalFilter;
 import org.junit.Test;
 
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static com.company.stream.OptionalFilter.*;
+import static stream.OptionalFilter.*;
 
 public class OptionalFilterTest {
 

@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  * Collectors.averagingDouble() подсчитывает среднее значения элементов в группе.
  * В качестве аргумента принимает функция, в которой мы должны указать как преобразовать элемент в double.

@@ -1,4 +1,4 @@
-package com.company.stream;
+package stream;
 /**
  *
 * Iterator это метод, который позволяет пробежаться по элементам коллекции

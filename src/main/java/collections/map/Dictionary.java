@@ -1,4 +1,4 @@
-package com.company.collections.map;
+package collections.map;
     //11. Реализовать словарь.
 //В данном задании необходимо реализовать словарь.
 //Метод принимает массив строк.

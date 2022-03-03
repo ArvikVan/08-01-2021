@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 
 public class Cryptography {
     public static String code(String s) {

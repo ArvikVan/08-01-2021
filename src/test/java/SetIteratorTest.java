@@ -1,4 +1,4 @@
-import com.company.collections.coll.SetIterator;
+import collections.coll.SetIterator;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

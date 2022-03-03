@@ -1,4 +1,4 @@
-package com.company.collections.map;
+package collections.map;
 
 import java.util.Objects;
 

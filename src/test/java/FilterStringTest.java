@@ -1,4 +1,4 @@
-import com.company.stream.FilterString;
+import stream.FilterString;
 import org.junit.Test;
 
 import java.util.List;

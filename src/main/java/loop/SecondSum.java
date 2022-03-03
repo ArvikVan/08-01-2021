@@ -1,4 +1,4 @@
-package com.company.loop;
+package loop;
 
 public class SecondSum {
     public static int sum(int a, int b) {

@@ -1,4 +1,4 @@
-import com.company.stream.CharsMethod;
+import stream.CharsMethod;
 import org.junit.Test;
 
 import java.util.List;

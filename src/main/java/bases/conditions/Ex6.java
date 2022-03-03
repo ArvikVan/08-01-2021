@@ -1,4 +1,4 @@
-package com.company.bases.conditions;
+package bases.conditions;
 
 import java.util.Scanner;
 

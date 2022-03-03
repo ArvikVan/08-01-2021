@@ -1,4 +1,4 @@
-import com.company.collections.map.ComputeIfAbsent;
+import collections.map.ComputeIfAbsent;
 import org.junit.Test;
 
 import java.util.HashMap;
