@@ -1,4 +1,4 @@
-package com.company.oop.generics;
+package oop.generics;
 
 public class Printer {
     public <T> void print(T[] items) {

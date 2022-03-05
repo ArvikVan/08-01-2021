@@ -1,4 +1,4 @@
-package com.company.oop.generics;
+package oop.generics;
 
 public class Account {
     private Object id;

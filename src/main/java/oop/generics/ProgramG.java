@@ -1,4 +1,4 @@
-package com.company.oop.generics;
+package oop.generics;
 
 public class ProgramG {
     public static void main(String[] args) {
