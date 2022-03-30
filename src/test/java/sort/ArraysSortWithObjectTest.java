@@ -10,7 +10,7 @@ public class ArraysSortWithObjectTest {
     @Test
     public void test() {
         String[] input = {"a", "b", "c"};
-        String[] result = com.company.sort.ArraysSortWithObject.sort(input);
+        String[] result = sort.ArraysSortWithObject.sort(input);
         String[] expected = {"c", "b", "a"};
         Assert.assertArrayEquals(expected, result);
     }

@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 
 public class CompareMethod {
     public static int ascendingCompare(int first, int second) {

@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 /**
  * класс описывает сортировку массива
  * @author Arviy

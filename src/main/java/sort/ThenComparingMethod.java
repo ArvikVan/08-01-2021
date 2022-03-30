@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 /**
  * класс который описывает сравнение
  * @author Arviy

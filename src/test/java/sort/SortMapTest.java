@@ -17,7 +17,7 @@ public class SortMapTest {
                 3, "3"
         );
         Map<Integer, String> expect = new TreeMap<>(input);
-        Map<Integer, String> result = com.company.sort.SortMap.sort(input);
+        Map<Integer, String> result = sort.SortMap.sort(input);
         Assert.assertEquals(expect, result);
     }
 

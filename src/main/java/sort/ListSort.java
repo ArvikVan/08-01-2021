@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 /**
  * класс описывает сортировку по убыванию с null в конце
  * @author Arviy

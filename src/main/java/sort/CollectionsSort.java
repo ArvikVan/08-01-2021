@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 /**
  * Класс описывает сортировку по возрастанию Метод Collections.sort()
  * @author Arviy

@@ -14,7 +14,7 @@ public class CollectionsSortTest {
     public void test() {
         List<String> input = Arrays.asList("c", "b", "a");
         List<String> expect = Arrays.asList("a", "b", "c");
-        List<String> out = com.company.sort.CollectionsSort.sort(input);
+        List<String> out = sort.CollectionsSort.sort(input);
         Assert.assertEquals(expect, out);
     }
 

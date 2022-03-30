@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 /**
  * Часто бывает нужно собрать результат обработки через стримы в список.
  * Для этого мы можем использовать методы collect() и Collectors.toList().

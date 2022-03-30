@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 
 import java.util.Comparator;
 

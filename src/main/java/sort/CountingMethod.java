@@ -1,4 +1,4 @@
-package com.company.sort;
+package sort;
 /**
  * Метод Collectors.groupingBy() всегда первым параметром принимает функцию, по которой будет строиться ключ.
  * Вторым параметром может принимать Collector. Большинство методов Collectors возвращают Collector.
