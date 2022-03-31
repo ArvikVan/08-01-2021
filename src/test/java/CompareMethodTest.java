@@ -1,4 +1,4 @@
-import com.company.sort.CompareMethod;
+import sort.CompareMethod;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

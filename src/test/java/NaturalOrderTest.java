@@ -1,4 +1,4 @@
-import com.company.sort.NaturalOrder;
+import sort.NaturalOrder;
 import org.junit.Test;
 
 import java.util.Comparator;

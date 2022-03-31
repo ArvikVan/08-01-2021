@@ -1,4 +1,4 @@
-import com.company.sort.CollectToList;
+import sort.CollectToList;
 import org.junit.Test;
 
 import java.util.List;

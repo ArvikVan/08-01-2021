@@ -1,4 +1,4 @@
-import com.company.sort.ThenComparingMethod;
+import sort.ThenComparingMethod;
 import org.junit.Test;
 
 import java.util.Arrays;

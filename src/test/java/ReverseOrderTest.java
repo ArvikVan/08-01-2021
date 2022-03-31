@@ -1,4 +1,4 @@
-import com.company.sort.ReverseOrder;
+import sort.ReverseOrder;
 import org.junit.Test;
 
 import java.util.Comparator;

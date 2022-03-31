@@ -1,4 +1,4 @@
-import com.company.sort.NullLastMethod;
+import sort.NullLastMethod;
 import org.junit.Test;
 
 import java.util.Arrays;
