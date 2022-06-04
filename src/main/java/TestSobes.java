@@ -20,4 +20,9 @@ public class TestSobes {
         }
         set.forEach(System.out::println);
     }
+
+    public void concat(String name) {
+        StringBuilder stringBuilder = new StringBuilder();
+        name.concat("adsfa");
+    }
 }
