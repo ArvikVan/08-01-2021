@@ -19,6 +19,17 @@
           <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.7" />
+          <element id="library" level="project" name="Maven: com.itextpdf:kernel:7.1.16" />
+          <element id="library" level="project" name="Maven: com.itextpdf:io:7.1.16" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.68" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.68" />
+          <element id="library" level="project" name="Maven: com.itextpdf:layout:7.1.16" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.6" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
+          <element id="library" level="project" name="Maven: org.json:json:20210307" />
+          <element id="library" level="project" name="Maven: com.itextpdf:barcodes:7.1.16" />
+          <element id="library" level="project" name="Maven: com.itextpdf:itextpdf:5.5.13.3" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.4.15.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" />
           <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
