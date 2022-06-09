@@ -280,15 +280,14 @@ public class GeneratePdf {
                                 jsonObject, "receiveDate"), 100f, -3f, TextAlignment.LEFT));
                     }
                 }
-
                 String textQR = generateQRText(content);
                 BarcodeQRCode qrcode = new BarcodeQRCode(textQR);
                 PdfFormXObject barcodeObject = qrcode.createFormXObject(ColorConstants.BLACK, pdfDoc);
                 Image barcodeImage = new Image(barcodeObject).setWidth(100f).setHeight(100f);
                 table.addCell(createQRCell(barcodeImage, 100f, -3f, TextAlignment.CENTER));
                 document.add(table);
-
-                document.add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+                table.addCell(createCell("", 100f, 50f, TextAlignment.CENTER));
+                //document.add(new AreaBreak(AreaBreakType.NEXT_PAGE));
 
             document.close();
             pdfDoc.close();
