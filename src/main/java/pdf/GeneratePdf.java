@@ -10,6 +10,7 @@ import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.draw.DottedLine;
+import com.itextpdf.kernel.pdf.canvas.draw.SolidLine;
 import com.itextpdf.kernel.pdf.xobject.PdfFormXObject;
 import com.itextpdf.layout.ColumnDocumentRenderer;
 import com.itextpdf.layout.Document;
@@ -18,6 +19,9 @@ import com.itextpdf.layout.element.*;
 import com.itextpdf.layout.property.AreaBreakType;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.UnitValue;
+import com.itextpdf.text.Chapter;
+import com.itextpdf.text.Section;
+import com.itextpdf.text.pdf.PdfPageEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -53,7 +57,14 @@ public class GeneratePdf {
             + "2,\"sum\":33600,\"nds\":1,\"paymentType\":4,\"productType\":1},{\"name\":\"! Пакет бренд Апельсин 38х60 "
             + "11гр\",\"price\":500,\"quantity\":1,\"sum\":500,\"nds\":1,\"paymentType\":4,\"productType\":1},{\"name\""
             + ":\"Крупа Родные Края 800г Гречневая Элита /12\",\"price\":9400,\"quantity\":1,\"sum\":9400,\"nds\":2,\""
-            + "paymentType\":4,\"productType\":1},{\"name\":\"Пирожки по домашн. с адыг. сыром 400гр/ Пекарня Станичник"
+            + "paymentType\":4,\"productType\":1},{\"name\":\"Яблоки Красные кг ЙФ\",\""
+            + "price\":8600,\"quantity\":0.53,\"sum\":4558,\"nds\":2,\"paymentType\":4,\"productType\":1}],\"operator\""
+            + ":\"Кассир\",\"cashTotalSum\":0,\"ecashTotalSum\":98602,\"prepaidSum\":0,\"creditSum\":0,\"provisionSum\""
+            + ":0,\"fnsUrl\":\"www.nalog.ru\",\"retailPlace\":\"Торговый зал\",\"fiscalDocumentFormatVer\":2,\"nds18\":"
+            + "10334,\"nds10\":3328,\"user\":\"ИП Челухин Е.В.\",\"retailPlaceAddress\":\"350087, г Краснодар, ул им "
+            + "Ягодина МД, 1\",\"appliedTaxationType\":1,\"region\":\"23\",\"numberKkt\":\"0065770006054530\",\""
+            + "redefine_mask\":0}}";
+    /*,{\"name\":\"Пирожки по домашн. с адыг. сыром 400гр/ Пекарня Станичник"
             + "\",\"price\":13900,\"quantity\":1,\"sum\":13900,\"nds\":2,\"paymentType\":4,\"productType\":1},{\"name\""
             + ":\"Вода Пьюр Лайф 2л пэт негаз\",\"price\":6200,\"quantity\":2,\"sum\":12400,\"nds\":1,\"paymentType\":"
             + "4,\"productType\":1},{\"name\":\"Энерг напиток Торнадо Актив 1л пэт\",\"price\":6700,\"quantity\":1,\""
@@ -61,13 +72,9 @@ public class GeneratePdf {
             + "средних собак\",\"price\":8800,\"quantity\":1,\"sum\":8800,\"nds\":1,\"paymentType\":4,\"productType\":"
             + "1},{\"name\":\"Хлеб Ржаной 300гр нарезка/ХЗ№6\",\"price\":3300,\"quantity\":1,\"sum\":3300,\"nds\":2,\""
             + "paymentType\":4,\"productType\":1},{\"name\":\"Помидоры на ветке кг ЙФ\",\"price\":16300,\"quantity\":"
-            + "0.334,\"sum\":5444,\"nds\":2,\"paymentType\":4,\"productType\":1},{\"name\":\"Яблоки Красные кг ЙФ\",\""
-            + "price\":8600,\"quantity\":0.53,\"sum\":4558,\"nds\":2,\"paymentType\":4,\"productType\":1}],\"operator\""
-            + ":\"Кассир\",\"cashTotalSum\":0,\"ecashTotalSum\":98602,\"prepaidSum\":0,\"creditSum\":0,\"provisionSum\""
-            + ":0,\"fnsUrl\":\"www.nalog.ru\",\"retailPlace\":\"Торговый зал\",\"fiscalDocumentFormatVer\":2,\"nds18\":"
-            + "10334,\"nds10\":3328,\"user\":\"ИП Челухин Е.В.\",\"retailPlaceAddress\":\"350087, г Краснодар, ул им "
-            + "Ягодина МД, 1\",\"appliedTaxationType\":1,\"region\":\"23\",\"numberKkt\":\"0065770006054530\",\""
-            + "redefine_mask\":0}}";
+            + "0.334,\"sum\":5444,\"nds\":2,\"paymentType\":4,\"productType\":1}*/
+    /*private final static String TEMP_JSON = "";*/
+
     public OutputStream generateCheckReport(String str) {
         /*String file = "C:/Data/pdf/a.pdf";*/
         try {
@@ -80,21 +87,23 @@ public class GeneratePdf {
                 JSONObject jsonObject = new JSONObject(TEMP_JSON);
                 JSONObject content = jsonObject.getJSONObject("content");
                 /*------*/
-            float offSet = 35;
-            System.out.println(PageSize.A4.getWidth());
-            System.out.println(PageSize.A4.getHeight());
-            float columnWidth = PageSize.A4.getWidth() / 2.4f;
-            float columnHeight = PageSize.A4.getHeight() - 320;
+                float offSet = 35;
+                System.out.println(PageSize.A4.getWidth());
+                System.out.println(PageSize.A4.getHeight());
+                float columnWidth = PageSize.A4.getWidth() / 2.4f;
+                float columnHeight = PageSize.A4.getHeight() - 320;
 
-            Rectangle[] columns = {
-                    new Rectangle(offSet - 5, offSet, columnWidth, columnHeight),
-                    new Rectangle(offSet + columnWidth, offSet, columnWidth, columnHeight),
-                    new Rectangle(
-                            offSet + columnWidth * 2 + 5, offSet, columnWidth, columnHeight)};
-            document.setRenderer(new ColumnDocumentRenderer(document, columns));
-            /*-------*/
+                Rectangle[] columns = {
+                        new Rectangle(offSet - 5, offSet, columnWidth, columnHeight),
+                        new Rectangle(offSet + columnWidth, offSet, columnWidth, columnHeight),
+                        new Rectangle(
+                                offSet + columnWidth * 2 + 5, offSet, columnWidth, columnHeight)};
+                document.setRenderer(new ColumnDocumentRenderer(document, columns));
+                /*-------*/
+            for (int ck = 0; ck < 2; ck++) {
                 Paragraph p = new Paragraph();
                 p.add("версия ");
+ /*-------------*/
                 p.add(parseFiscalDocumentFormatVersion(content));
                 p.setTextAlignment(TextAlignment.CENTER);
                 document.add(p);
@@ -162,7 +171,7 @@ public class GeneratePdf {
                 line = new DottedLine(2f);
                 line.setGap(3.5f);
                 ls = new LineSeparator(line);
-                ls.setMarginTop(30f);
+                ls.setMarginTop(10f);
                 ls.setMarginBottom(10f);
                 document.add(ls);
 
@@ -172,9 +181,9 @@ public class GeneratePdf {
                 table.addCell(createCellBold("ИТОГО", 50f, TextAlignment.LEFT));
                 table.addCell(createCellBold(getDouble(content, "totalSum"), 50f, TextAlignment.RIGHT));
 
-        //        table = new Table(2);
-        //        table.setWidth(UnitValue.createPercentValue(100));
-        //        table.setBorder(Border.NO_BORDER);
+                //        table = new Table(2);
+                //        table.setWidth(UnitValue.createPercentValue(100));
+                //        table.setBorder(Border.NO_BORDER);
 
                 table.addCell(createCell("Наличные", 50f, -3f, TextAlignment.LEFT));
                 table.addCell(createCell(
@@ -222,7 +231,7 @@ public class GeneratePdf {
                 line = new DottedLine(2f);
                 line.setGap(3.5f);
                 ls = new LineSeparator(line);
-                ls.setMarginTop(20f);
+                ls.setMarginTop(0f);
                 ls.setMarginBottom(10f);
                 document.add(ls);
 
@@ -252,7 +261,7 @@ public class GeneratePdf {
                 line = new DottedLine(2f);
                 line.setGap(3.5f);
                 ls = new LineSeparator(line);
-                ls.setMarginTop(20f);
+                ls.setMarginTop(0f);
                 ls.setMarginBottom(10f);
                 document.add(ls);
 
@@ -280,18 +289,33 @@ public class GeneratePdf {
                                 jsonObject, "receiveDate"), 100f, -3f, TextAlignment.LEFT));
                     }
                 }
+                /**
+                 * генерация QR кода
+                 */
                 String textQR = generateQRText(content);
                 BarcodeQRCode qrcode = new BarcodeQRCode(textQR);
                 PdfFormXObject barcodeObject = qrcode.createFormXObject(ColorConstants.BLACK, pdfDoc);
                 Image barcodeImage = new Image(barcodeObject).setWidth(100f).setHeight(100f);
-                table.addCell(createQRCell(barcodeImage, 100f, -3f, TextAlignment.CENTER));
+                table.addCell(createQRCell(barcodeImage));
+                table.addCell(createCell("", 100f, 0f, TextAlignment.CENTER));
                 document.add(table);
-                table.addCell(createCell("", 100f, 50f, TextAlignment.CENTER));
-                //document.add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+                /**
+                 * генерация разделителя чеков, линия
+                 */
+                SolidLine solidLine = new SolidLine();
+                solidLine.setLineWidth(2f);
+                LineSeparator lineSeparator = new LineSeparator(solidLine);
+                lineSeparator.setMarginBottom(50f);
+                document.add(lineSeparator);
+                document.add(new AreaBreak(AreaBreakType.NEXT_AREA));
 
-            document.close();
-            pdfDoc.close();
-            log.info("Table created successfully..");
+                System.out.println("receipt: " + ck);
+            }
+                document.close();
+                pdfDoc.close();
+
+                 log.info("Table created successfully..");
+
             OutputStream outputStream = new FileOutputStream("file.pdf");
             baos.writeTo(outputStream);
             return baos;
@@ -365,15 +389,15 @@ public class GeneratePdf {
         return cell;
     }
 
-    static Cell createQRCell(Image image, float percentage, float margin, TextAlignment alignment) {
+    static Cell createQRCell(Image image) {
         Paragraph p = new Paragraph();
         p.add(image);
-        p.setTextAlignment(alignment);
-        p.setMarginTop(margin);
+        p.setTextAlignment(TextAlignment.CENTER);
+        p.setMarginTop((float) -3.0);
         Cell cell = new Cell();
         cell.add(p);
         cell.setBorder(Border.NO_BORDER);
-        cell.setWidth(UnitValue.createPercentValue(percentage));
+        cell.setWidth(UnitValue.createPercentValue((float) 100.0));
         return cell;
     }
 
