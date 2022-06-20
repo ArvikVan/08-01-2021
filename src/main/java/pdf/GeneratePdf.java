@@ -101,14 +101,13 @@ public class GeneratePdf {
                 JSONObject jsonObject = new JSONObject(report);
                 JSONObject content = new JSONObject(report);
 
-                boolean rec2 = Arrays.stream(columns).filter(x -> x.getWidth() == 176).anyMatch(x -> x.contains(rectangle2));
-                boolean rec3 = Arrays.stream(columns).filter(x -> x.getWidth() == 177).anyMatch(x -> x.contains(rectangle3));
                 if (pdfDoc.getNumberOfPages() != 0 && content.get("items").toString().length() < 3210) {
                     document.add(new AreaBreak(AreaBreakType.NEXT_AREA));
                 }
+                if (pdfDoc.getNumberOfPages() != 0 && content.get("items").toString().length() > 3210 /*&& rec3 || content.get("items").toString().length() > 3760 && rec2*/) {
+                    document.add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+                }
                 /*определяем размер чека и его размещение*/
-                int itemContentLength = content.get("items").toString().length();
-                //System.out.print(" Длина " + content.get("items").toString().length() + " | --" + rec2 + rec3 + "--");
                 Paragraph p = new Paragraph();
                 p.add("версия ");
  /*-------------*/
@@ -314,15 +313,7 @@ public class GeneratePdf {
                 LineSeparator lineSeparator = new LineSeparator(solidLine);
                 lineSeparator.setMarginBottom(15f);
                 document.add(lineSeparator);
-                int numOfPageEnd = pdfDoc.getNumberOfPages();
-                if (content.get("items").toString().length() > 3210 /*&& rec3 || content.get("items").toString().length() > 3760 && rec2*/) {
-                    document.add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-                }
-                System.out.print(numOfPageStart + " | " + numOfPageEnd);
-
             } /*End of receipt */
-
-            System.out.println(" | Кол-во чеков " + receiptNumber);
             document.close();
             pdfDoc.close();
                  log.info("Table created successfully..");
