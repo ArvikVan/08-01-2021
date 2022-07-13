@@ -27,8 +27,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -48,15 +51,7 @@ public class GeneratePdf {
 
     private final static String FONT = "arial.ttf";
     private final static List<String> REPORTS = List.of(
-            "{\"dateTime\":\"2021-06-19T12:56:00\",\"cashTotalSum\":0,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":3187100,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":7164,\"fiscalDriveNumber\":\"9282440300670992\",\"fiscalSign\":2515509471,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000474216011153    \",\"nds18\":531193,\"operationType\":1,\"operator\":\"Антонов Никита Владимирович\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":10,\"retailPlace\":\"Магазин Декатлон\",\"retailPlaceAddress\":\"МО 84км МКАД ТПЗ Алтуфьевовл 3 стр 3\",\"shiftNumber\":346,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":3187100,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T14:15:00\",\"cashTotalSum\":2527700,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":0,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":74520,\"fiscalDriveNumber\":\"9282440300894804\",\"fiscalSign\":3918271077,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000412753042078    \",\"nds18\":421291,\"operationType\":1,\"operator\":\"Сайдходжаева Камила Рустамовна\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":44,\"retailPlace\":\"Торговый зал 1\",\"retailPlaceAddress\":\"125252 Москва,ул.Авиаконструктора Микояна,10\",\"shiftNumber\":288,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":2527700,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T14:15:00\",\"cashTotalSum\":2527700,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":0,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":74520,\"fiscalDriveNumber\":\"9282440300894804\",\"fiscalSign\":3918271077,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000412753042078    \",\"nds18\":421291,\"operationType\":1,\"operator\":\"Сайдходжаева Камила Рустамовна\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":44,\"retailPlace\":\"Торговый зал 1\",\"retailPlaceAddress\":\"125252 Москва,ул.Авиаконструктора Микояна,10\",\"shiftNumber\":288,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":2527700,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T14:15:00\",\"cashTotalSum\":2527700,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":0,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":74520,\"fiscalDriveNumber\":\"9282440300894804\",\"fiscalSign\":3918271077,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000412753042078    \",\"nds18\":421291,\"operationType\":1,\"operator\":\"Сайдходжаева Камила Рустамовна\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":44,\"retailPlace\":\"Торговый зал 1\",\"retailPlaceAddress\":\"125252 Москва,ул.Авиаконструктора Микояна,10\",\"shiftNumber\":288,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":2527700,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T12:56:00\",\"cashTotalSum\":0,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":3187100,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":7164,\"fiscalDriveNumber\":\"9282440300670992\",\"fiscalSign\":2515509471,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000474216011153    \",\"nds18\":531193,\"operationType\":1,\"operator\":\"Антонов Никита Владимирович\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":10,\"retailPlace\":\"Магазин Декатлон\",\"retailPlaceAddress\":\"МО 84км МКАД ТПЗ Алтуфьевовл 3 стр 3\",\"shiftNumber\":346,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":3187100,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T14:15:00\",\"cashTotalSum\":2527700,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":0,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":74520,\"fiscalDriveNumber\":\"9282440300894804\",\"fiscalSign\":3918271077,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}, {\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000412753042078    \",\"nds18\":421291,\"operationType\":1,\"operator\":\"Сайдходжаева Камила Рустамовна\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":44,\"retailPlace\":\"Торговый зал 1\",\"retailPlaceAddress\":\"125252 Москва,ул.Авиаконструктора Микояна,10\",\"shiftNumber\":288,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":2527700,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T12:56:00\",\"cashTotalSum\":0,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":3187100,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":7164,\"fiscalDriveNumber\":\"9282440300670992\",\"fiscalSign\":2515509471,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000474216011153    \",\"nds18\":531193,\"operationType\":1,\"operator\":\"Антонов Никита Владимирович\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":10,\"retailPlace\":\"Магазин Декатлон\",\"retailPlaceAddress\":\"МО 84км МКАД ТПЗ Алтуфьевовл 3 стр 3\",\"shiftNumber\":346,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":3187100,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T11:19:00\",\"cashTotalSum\":0,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":3297000,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":16100,\"fiscalDriveNumber\":\"9288000100160791\",\"fiscalSign\":1278340747,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000552493047847    \",\"nds18\":549510,\"operationType\":1,\"operator\":\"Галашова Ксения Александровна\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":4,\"retailPlace\":\"Магазин Декатлон\",\"retailPlaceAddress\":\"142704 Москва, 21-й км Калужского шоссе д.3\",\"shiftNumber\":169,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":3297000,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}",
-            "{\"dateTime\":\"2021-06-19T11:19:00\",\"cashTotalSum\":0,\"code\":3,\"creditSum\":0,\"ecashTotalSum\":3297000,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":16100,\"fiscalDriveNumber\":\"9288000100160791\",\"fiscalSign\":1278340747,\"fnsUrl\":\"https://www.nalog.ru/\",\"items\":[{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900},{\"name\":\"Шлем H PLAY 5 для взрослых бел\",\"nds\":1,\"paymentType\":4,\"price\":109900,\"quantity\":1,\"sum\":109900}],\"kktRegId\":\"0000552493047847    \",\"nds18\":549510,\"operationType\":1,\"operator\":\"Галашова Ксения Александровна\",\"prepaidSum\":0,\"provisionSum\":0,\"requestNumber\":4,\"retailPlace\":\"Магазин Декатлон\",\"retailPlaceAddress\":\"142704 Москва, 21-й км Калужского шоссе д.3\",\"shiftNumber\":169,\"taxationType\":1,\"appliedTaxationType\":1,\"totalSum\":3297000,\"user\":\"ООО \\\"ОКТОБЛУ\\\"\",\"userInn\":\"5029086747  \"}"
+            "{\"address\":\"369006,,09,,г Черкесск,,ул Подгорная,д47,кБ,\",\"content\":{\"appliedTaxationType\":4,\"cashTotalSum\":50000,\"code\":3,\"creditSum\":0,\"dateTime\":1655200920,\"ecashTotalSum\":0,\"fiscalDocumentFormatVer\":2,\"fiscalDocumentNumber\":4303,\"fiscalDriveNumber\":\"9287440300246247\",\"fiscalSign\":235858673,\"items\":[{\"name\":\"АИ-92\",\"nds\":6,\"ndsSum\":0,\"paymentType\":4,\"price\":50000,\"quantity\":1.0,\"sum\":50000}],\"kktRegId\":\"0003251823035383    \",\"nds18\":0,\"operationType\":1,\"operator\":\"Кассир 1 Хачиров В.Х.\",\"prepaidSum\":0,\"provisionSum\":0,\"redefine_mask\":4,\"requestNumber\":2,\"retailPlace\":\"АЗС\",\"retailPlaceAddress\":\"369000, КЧР, г.Черкесск, ул.Подгорная , 47\\\"Б\\\"\",\"shiftNumber\":1091,\"totalSum\":50000,\"user\":\"ИП Хачиров В.Х.\",\"userInn\":\"090700130563\"},\"id\":4295810691665835520,\"ofdId\":\"ofd31\",\"receiveDate\":\"2022-06-24T05:57:50Z\",\"subtype\":\"receipt\",\"printablePdfUrl\":\"\",\"fnsUrl\":\"http://trback.btlsrv.ru/unilevermob/api/fns/qr?t=20220614T100200&s=500.00&fn=9287440300246247&i=4303&fp=235858673&n=1\"}"
     );
 
     /*private final static String TEMP_JSON = "{\"id\":3677751255694242000,\"ofdId\":\"ofd1\",\"receiveDate\":\"2021-04-23T20:50:39Z\",\"subtype\":\"receipt\",\"address\":\"350087,Россия,Краснодарский край,,г Краснодар г.п.,,,ул им Ягодина МД элем. улично-дорожн.сети,,д. 1,,,,\",\"content\":{\"messageFiscalSign\":9297239341736763000,\"code\":3,\"fiscalDriveNumber\":\"9289440300694481\",\"kktRegId\":\"0002128807009086    \",\"userInn\":\"234305505336\",\"fiscalDocumentNumber\":91187,\"dateTime\":1619221800,\"fiscalSign\":2771329287,\"shiftNumber\":460,\"requestNumber\":125,\"operationType\":1,\"totalSum\":98602,\"items\":[{\"name\":\"Крупа Родные Края 800г Гречневая Элита /12\",\"price\":9400,\"quantity\":1,\"sum\":9400,\"nds\":2,\"paymentType\":4,\"productType\":1},{\"name\":\"Пирожки по домашн. с адыг. сыром 400гр/ Пекарня Станичник\",\"price\":13900,\"quantity\":1,\"sum\":13900,\"nds\":2,\"paymentType\":4,\"productType\":1},{\"name\":\"Вода Пьюр Лайф 2л пэт негаз\",\"price\":6200,\"quantity\":2,\"sum\":12400,\"nds\":1,\"paymentType\":4,\"productType\":1},{\"name\":\"Энерг напиток Торнадо Актив 1л пэт\",\"price\":6700,\"quantity\":1,\"sum\":6700,\"nds\":1,\"paymentType\":4,\"productType\":1},{\"name\":\"Корм Педигри дентастикс 77гр для средних собак\",\"price\":8800,\"quantity\":1,\"sum\":8800,\"nds\":1,\"paymentType\":4,\"productType\":1},{\"name\":\"Хлеб Ржаной 300гр нарезка/ХЗ№6\",\"price\":3300,\"quantity\":1,\"sum\":3300,\"nds\":2,\"paymentType\":4,\"productType\":1},{\"name\":\"Помидоры на ветке кг ЙФ\",\"price\":16300,\"quantity\":0.334,\"sum\":5444,\"nds\":2,\"paymentType\":4,\"productType\":1},{\"name\":\"Яблоки Красные кг ЙФ\",\"price\":8600,\"quantity\":0.53,\"sum\":4558,\"nds\":2,\"paymentType\":4,\"productType\":1}],\"operator\":\"Кассир\",\"cashTotalSum\":0,\"ecashTotalSum\":98602,\"prepaidSum\":0,\"creditSum\":0,\"provisionSum\":0,\"fnsUrl\":\"www.nalog.ru\",\"retailPlace\":\"Торговый зал\",\"fiscalDocumentFormatVer\":2,\"nds18\":10334,\"nds10\":3328,\"user\":\"ИП Челухин Е.В.\",\"retailPlaceAddress\":\"350087, г Краснодар, ул им Ягодина МД, 1\",\"appliedTaxationType\":1,\"region\":\"23\",\"numberKkt\":\"0065770006054530\",\"redefine_mask\":0}}";
@@ -69,33 +64,26 @@ public class GeneratePdf {
             Document document = new Document(pdfDoc, PageSize.A4);
             setFont(document);
             Map<String, String> kv = new LinkedHashMap<>();
-            Map<String, String> kvn = new LinkedHashMap<>();
+            Map<String, String> kvnds = new LinkedHashMap<>();
             /**
              * инициализация страницы, разбивка страницы на столбцы, задание размера страницы
              */
             float offSet = 35;
             System.out.println("Width(): " + PageSize.A4.getWidth());
             System.out.println("Height(): " + PageSize.A4.getHeight());
-
             float columnWidth = PageSize.A4.getWidth() / 3.4f;
             float columnHeight = PageSize.A4.getHeight() - 50;
 
             Rectangle rectangle1 = new Rectangle(offSet - 5, offSet, columnWidth, columnHeight);
             Rectangle rectangle2 = new Rectangle(offSet + columnWidth, offSet, 176, 791);
-            Rectangle rec3 = new Rectangle(offSet + columnWidth * 2 + 5, offSet, 177, 790);
-            System.out.println("rectangle3 height " + rec3.getHeight());
-            Rectangle[] columns = {rectangle1, rectangle2, rec3};
+            Rectangle rectangle3 = new Rectangle(offSet + columnWidth * 2 + 5, offSet, 177, 790);
+            Rectangle[] columns = {rectangle1, rectangle2, rectangle3};
             document.setRenderer(new ColumnDocumentRenderer(document, columns));
-            //System.out.println();
-            //int pageNumber = document.getRenderer().getCurrentArea().getPageNumber();
-            /*-------*/
+
             for (String report : REPORTS) {
                 JSONObject jsonObject = new JSONObject(report);
-                JSONObject content = new JSONObject(report);
-                System.out.println("length(): " + jsonObject.toString().length() + ", pageNumber " + document.getRenderer().getCurrentArea().getBBox().getHeight() + ", pdfDoc.getNumberOfPages() " + pdfDoc.getNumberOfPages());
-                /*if (document.getRenderer().getCurrentArea().getPageNumber() != 1 && content.get("items").toString().length() < 3210) {
-                    document.add(new AreaBreak(AreaBreakType.NEXT_AREA));
-                } else */
+                JSONObject content = jsonObject.getJSONObject("content");
+                System.out.println("length(): " + jsonObject.toString().length());
                 if (pdfDoc.getNumberOfPages() != 0 && jsonObject.toString().length() > 6100
                         || (document.getRenderer().getCurrentArea().getBBox().getHeight() == 790.0 && jsonObject.toString().length() > 1925
                         || (document.getRenderer().getCurrentArea().getBBox().getHeight() == 791.0 && jsonObject.toString().length() > 3860))) {
@@ -115,22 +103,27 @@ public class GeneratePdf {
                 document.add(p);
                 Table header = new Table(1);
                 kv = new LinkedHashMap<>();
-                kv.put("user", "");
-                kv.put("retailPlaceAddress", "");
-                kv.put("retailPlace", "");
+                kv.put("user", "Пользователь: ");
+                kv.put("retailPlaceAddress", "Адрес расчета: ");
+                kv.put("retailPlace", "Место расчета: ");
                 kv.put("userInn", "ИНН ");
                 kv.put("requestNumber", "Чек № ");
                 kv.put("shiftNumber", "Смена № ");
                 kv.put("operator", "Кассир ");
 
+                DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                dateFormat.setTimeZone(TimeZone.getTimeZone("Etc/GMT+0"));
+                Long dateL = content.getLong("dateTime");
+                Date date = new Date(dateL * 1000L);
+                String t = dateFormat.format(date);
+                log.info(t);
                 for (String k : kv.keySet()) {
                     String v = getString(content, k);
                     if (v != null) {
                         header.addCell(createCell(kv.get(k) + v, 100f, -3f, TextAlignment.CENTER));
                     }
-                    if (Objects.equals(k, "userInn")) {
-                        header.addCell(createCell("" + getString(
-                                jsonObject, ""), 100f, -3f, TextAlignment.CENTER));
+                    if (k == "userInn") {
+                        header.addCell(createCell("Дата: " + t, 100f, -3f, TextAlignment.CENTER));
                     }
                 }
                 document.add(header);
@@ -147,13 +140,12 @@ public class GeneratePdf {
                 table.setBorder(Border.NO_BORDER);
 
                 table.addHeaderCell(createHeaderCell("№", 5f, TextAlignment.LEFT));
-                table.addHeaderCell(createHeaderCell("Название", 20f, TextAlignment.CENTER));
+                table.addHeaderCell(createHeaderCell("Название", 20f, TextAlignment.LEFT));
                 table.addHeaderCell(createHeaderCell("Цена", 30f, TextAlignment.RIGHT));
                 table.addHeaderCell(createHeaderCell("Кол.", 10f, TextAlignment.RIGHT));
                 table.addHeaderCell(createHeaderCell("Сумма", 10f, TextAlignment.RIGHT));
 
                 document.add(table);
-
                 JSONArray items = content.getJSONArray("items");
                 for (int i = 0; i < items.length(); i++) {
                     table = new Table(5);
@@ -174,8 +166,8 @@ public class GeneratePdf {
 
                     table.addCell(createCell(N, 5f, -3f, TextAlignment.LEFT));
                     table.addCell(createCell(name, 0f, -3f, TextAlignment.LEFT));
-                    table.addCell(createCell(price, 10f, -3f, TextAlignment.LEFT));
-                    table.addCell(createCell(count, 10f, -3f, TextAlignment.CENTER));
+                    table.addCell(createCell(price, 10f, -3f, TextAlignment.RIGHT));
+                    table.addCell(createCell(count, 10f, -3f, TextAlignment.RIGHT));
                     table.addCell(createCell(sum, 10f, -3f, TextAlignment.RIGHT));
 
                     document.add(table);
@@ -216,33 +208,19 @@ public class GeneratePdf {
                 table.addCell(createCell(
                         getString(content, "shiftNumber"), 50f, -3f, TextAlignment.RIGHT));
 
-                /*table.addCell(
-                        createCell("Сумма по чеку предоплатой", 50f, -3f, TextAlignment.LEFT));
-                table.addCell(createCell(
-                        getDouble(content, "prepaidSum"), 50f, -3f, TextAlignment.RIGHT));
+                kvnds.put("nds18", "Сумма НДС чека по ставке 20%");
+                kvnds.put("nds10", "Сумма НДС чека по ставке 10%");
+                kvnds.put("nds0", "Сумма расчета по чеку с НДС по ставке 0%");
+                kvnds.put("ndsNo", "Сумма расчета по чеку без НДС");
+                kvnds.put("nds10110", "Сумма НДС чека по расч. ставке 10/110");
+                kvnds.put("ndsCalculated10", "Сумма НДС чека по расч. ставке 10/110");
+                kvnds.put("nds18118", "Сумма НДС чека по расч. ставке 20/120");
+                kvnds.put("ndsCalculated18", "Сумма НДС чека по расч. ставке 20/120");
 
-                table.addCell(
-                        createCell("Сумма по чеку постоплатой", 50f, -3f, TextAlignment.LEFT));
-                table.addCell(createCell(
-                        getDouble(content, "creditSum"), 50f, -3f, TextAlignment.RIGHT));
-
-                table.addCell(createCell(
-                        "Сумма по чеку встречным представлением", 50f, -3f, TextAlignment.LEFT));
-                table.addCell(createCell(
-                        getDouble(content, "provisionSum"), 50f, -3f, TextAlignment.RIGHT));*/
-                kvn.put("nds18", "Сумма НДС чека по ставке 20%");
-                kvn.put("nds10", "Сумма НДС чека по ставке 10%");
-                kvn.put("nds0", "Сумма расчета по чеку с НДС по ставке 0%");
-                kvn.put("ndsNo", "Сумма расчета по чеку без НДС");
-                kvn.put("nds10110", "Сумма НДС чека по расч. ставке 10/110");
-                kvn.put("ndsCalculated10", "Сумма НДС чека по расч. ставке 10/110");
-                kvn.put("nds18118", "Сумма НДС чека по расч. ставке 20/120");
-                kvn.put("ndsCalculated18", "Сумма НДС чека по расч. ставке 20/120");
-
-                for (String k : kvn.keySet()) {
+                for (String k : kvnds.keySet()) {
                     String v = getDouble(content, k);
                     if (v != null) {
-                        table.addCell(createCell(kvn.get(k), 50f, -3f, TextAlignment.LEFT));
+                        table.addCell(createCell(kvnds.get(k), 50f, -3f, TextAlignment.LEFT));
                         table.addCell(createCell(v, 50f, -3f, TextAlignment.RIGHT));
                     }
                 }
@@ -308,11 +286,10 @@ public class GeneratePdf {
                 lineSeparator.setMarginBottom(15f);
                 document.add(lineSeparator);
                 document.add(new AreaBreak(AreaBreakType.NEXT_AREA));
-            } /*End of receipt */
+            }
             document.close();
             pdfDoc.close();
-                 log.info("Table created successfully..");
-
+            log.info("Table created successfully..");
             OutputStream outputStream = new FileOutputStream("file.pdf");
             baos.writeTo(outputStream);
             return baos;
@@ -320,6 +297,64 @@ public class GeneratePdf {
             log.error(e.toString());
             return null;
         }
+    }
+
+    static Cell createQRCell(Image image) {
+        Paragraph p = new Paragraph();
+        p.add(image);
+        p.setTextAlignment(TextAlignment.CENTER);
+        p.setMarginTop((float) -3.0);
+        Cell cell = new Cell();
+        cell.add(p);
+        cell.setBorder(Border.NO_BORDER);
+        cell.setWidth(UnitValue.createPercentValue((float) 100.0));
+        return cell;
+    }
+
+    static Cell createCell(String text, float percentage, float margin, TextAlignment alignment) {
+        Paragraph p = new Paragraph();
+        p.add(text);
+        p.setTextAlignment(alignment);
+        p.setMarginTop(margin);
+
+        Cell cell = new Cell();
+        cell.add(p);
+        cell.setBorder(Border.NO_BORDER);
+        //cell.setBackgroundColor(new DeviceRgb(0xA6, 0xCB, 0x0B));
+        cell.setWidth(UnitValue.createPercentValue(percentage));
+
+        return cell;
+    }
+
+    static Cell createCellBold(String text, TextAlignment alignment) {
+        Paragraph p = new Paragraph();
+        p.add(text);
+        p.setTextAlignment(alignment);
+        p.setMarginTop(-3f);
+        p.setBold();
+        p.setFontSize(15);
+        Cell cell = new Cell();
+        cell.add(p);
+        cell.setBorder(Border.NO_BORDER);
+        //cell.setBackgroundColor(new DeviceRgb(0xA6, 0xCB, 0x0B));
+        cell.setWidth(UnitValue.createPercentValue((float) 50.0));
+
+        return cell;
+    }
+
+    static Cell createHeaderCell(String text, float percentage, TextAlignment alignment) {
+        Paragraph p = new Paragraph();
+        p.add(text);
+        p.setTextAlignment(alignment);
+        p.setBold();
+
+        Cell cell = new Cell();
+        cell.add(p);
+        cell.setBorder(Border.NO_BORDER);
+
+        cell.setWidth(UnitValue.createPercentValue(percentage));
+
+        return cell;
     }
 
     static void setFont(Document doc) throws IOException {
@@ -355,87 +390,12 @@ public class GeneratePdf {
         return "";
     }
 
-    static Cell createHeaderCell(String text, float percentage, TextAlignment alignment) {
-        Paragraph p = new Paragraph();
-        p.add(text);
-        p.setTextAlignment(alignment);
-        p.setBold();
-
-        Cell cell = new Cell();
-        cell.add(p);
-        cell.setBorder(Border.NO_BORDER);
-
-        cell.setWidth(UnitValue.createPercentValue(percentage));
-
-        return cell;
-    }
-
-    static Cell createCell(String text, float percentage, float margin, TextAlignment alignment) {
-        Paragraph p = new Paragraph();
-        p.add(text);
-        p.setTextAlignment(alignment);
-        p.setMarginTop(margin);
-
-        Cell cell = new Cell();
-        cell.add(p);
-        cell.setBorder(Border.NO_BORDER);
-        cell.setWidth(UnitValue.createPercentValue(percentage));
-
-        return cell;
-    }
-
-    static Cell createQRCell(Image image) {
-        Paragraph p = new Paragraph();
-        p.add(image);
-        p.setTextAlignment(TextAlignment.CENTER);
-        p.setMarginTop((float) -3.0);
-        Cell cell = new Cell();
-        cell.add(p);
-        cell.setBorder(Border.NO_BORDER);
-        cell.setWidth(UnitValue.createPercentValue((float) 100.0));
-        return cell;
-    }
-
-    static String parseNDS(JSONObject j) {
-        int nds = j.getInt("nds");
-        if (nds == 1) {
-            return "НДС 20%";
-        } else if (nds == 2) {
-            return "НДС 10%";
-        } else if (nds == 3) {
-            return "НДС 20/120";
-        } else if (nds == 4) {
-            return "НДС 10/110";
-        } else if (nds == 5) {
-            return "НДС 0%";
-        } else if (nds == 6) {
-            return "НДС не облагается";
-        }
-        return "";
-    }
-
     static String parsePaymentType(JSONObject j) {
         return "ПОЛНЫЙ РАСЧЕТ";
     }
 
     static String parseProductType(JSONObject j) {
         return "ТОВАР";
-    }
-
-    static Cell createCellBold(String text, TextAlignment alignment) {
-        Paragraph p = new Paragraph();
-        p.add(text);
-        p.setTextAlignment(alignment);
-        p.setMarginTop(-3f);
-        p.setBold();
-        p.setFontSize(15);
-        Cell cell = new Cell();
-        cell.add(p);
-        cell.setBorder(Border.NO_BORDER);
-        //cell.setBackgroundColor(new DeviceRgb(0xA6, 0xCB, 0x0B));
-        cell.setWidth(UnitValue.createPercentValue((float) 50.0));
-
-        return cell;
     }
 
     static String getDouble(JSONObject j, String key) {
@@ -479,20 +439,38 @@ public class GeneratePdf {
         return null;
     }
 
-    static String generateQRText(JSONObject j) throws ParseException {
-        /*Long dateL = j.getLong("dateTime");
-        Date date = new Date(dateL * 1000);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd'T'HHmmss");*/
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss"); //2021-04-23T20:50:39Z 2021-06-19T14:15:00
-        Date date = dateFormat.parse(j.getString("dateTime"));
+    static String parseNDS(JSONObject j) {
+        int nds = j.getInt("nds");
+        if (nds == 1) {
+            return "НДС 20%";
+        } else if (nds == 2) {
+            return "НДС 10%";
+        } else if (nds == 3) {
+            return "НДС 20/120";
+        } else if (nds == 4) {
+            return "НДС 10/110";
+        } else if (nds == 5) {
+            return "НДС 0%";
+        } else if (nds == 6) {
+            return "НДС не облагается";
+        }
+        return "";
+    }
 
+    static String generateQRText(JSONObject j) throws ParseException {
+        /*DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss"); //2021-04-23T20:50:39Z 2021-06-19T14:15:00
+        Date date = dateFormat.parse(j.getString("dateTime"));*/
+        Long dateL = j.getLong("dateTime");
+        Date date = new Date(dateL * 1000L);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         dateFormat.setTimeZone(TimeZone.getTimeZone("Etc/GMT+0")); // Set time-zone
+
         String t = dateFormat.format(date);
 
         String fn = j.getString("fiscalDriveNumber");
         Long i = j.getLong("fiscalDocumentNumber");
         Long fp = j.getLong("fiscalSign");
-        Float s = j.getLong("totalSum") / 100f;
+        Float s = j.getLong("totalSum") / 00f;
         Long n = j.getLong("operationType");
 
         return String.format(Locale.US, "t=%s&s=%.2f&fn=%s&i=%s&fp=%s&n=%s", t, s, fn, i, fp, n);
