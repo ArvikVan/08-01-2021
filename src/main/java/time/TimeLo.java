@@ -1,18 +1,13 @@
 package time;
 
-import org.json.JSONObject;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Optional;
 import java.util.UUID;
 
 public class TimeLo {
@@ -36,48 +31,46 @@ public class TimeLo {
         }
         double originalImageHeight = image.getHeight();
         double originalImageWidth = image.getWidth();
-        System.out.println("originalImageHeight = " + image.getHeight());System.out.println("originalImageWidth = " + image.getWidth());
         double ratio = originalImageHeight > originalImageWidth
                 ? originalImageHeight/originalImageWidth : originalImageWidth/originalImageHeight;
-        System.out.println("ratio = " + ratio);
-        double targetWfromREST = 0, targetHfromREST = 0;
+
+        double targetWfromREST = 0;
+        double targetHfromREST = 0;
+        int xCoordinate = 0;
+        int yCoordinate = 0;
         if (originalImageHeight > originalImageWidth) {
             targetWfromREST = sizeFromREST;
             targetHfromREST = sizeFromREST * ratio;
+            yCoordinate = (int) ((targetHfromREST - sizeFromREST) / 2);
         } else {
             targetWfromREST = sizeFromREST * ratio;
             targetHfromREST = sizeFromREST;
+            xCoordinate = (int) ((targetWfromREST - sizeFromREST) / 2);
         }
-        System.out.println("targetWfromREST = " + targetWfromREST);
-        System.out.println("targetHfromREST = " + targetHfromREST);
+
         //уменьшаем размер картинки
         ImageIO.write(resizeImage(image, (int) targetWfromREST, (int) targetHfromREST),
-                "jpg",
+                "png",
                 new File(savePicturesDirectory + id + "-resize.png"));
 
         //обрезаем картинку
         File fileForCut = new File(savePicturesDirectory + id + "-resize.png");
         BufferedImage cuttingImage = ImageIO.read(fileForCut);
-        int measure = (int) (targetWfromREST < targetHfromREST ? targetWfromREST : targetHfromREST);
-        ImageIO.write(cutImage(cuttingImage, measure, measure), "jpg",
+        int measure = (int) (Math.min(targetWfromREST, targetHfromREST));
+        ImageIO.write(cutImage(cuttingImage, measure, measure, xCoordinate, yCoordinate), "jpg",
                 new File(savePicturesDirectory + id + "-resize-cut.png"));
     }
 
-    public static BufferedImage resizeImage(BufferedImage originalImage, int targetWidth, int targetHeight) throws IOException {
+    public static BufferedImage resizeImage(BufferedImage originalImage, int targetWidth, int targetHeight) {
         BufferedImage resizedImage = new BufferedImage(targetWidth, targetHeight, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics2D = resizedImage.createGraphics();
         graphics2D.drawImage(originalImage, 0, 0, targetWidth, targetHeight, null);
         graphics2D.dispose();
         return resizedImage;
     }
-    public static BufferedImage resize(BufferedImage original, int targetW, int targetH) {
-        Image resultImage = original.getScaledInstance(targetW, targetH, Image.SCALE_DEFAULT);
-        BufferedImage outputImage = new BufferedImage(targetW, targetH, BufferedImage.TYPE_INT_RGB);
-        outputImage.getGraphics().drawImage(resultImage, 0, 0, null);
-        return outputImage;
-    }
-    public static BufferedImage cutImage(BufferedImage image, int w, int h) {
-        BufferedImage img = image.getSubimage(0, 0, w, h); //fill in the corners of the desired crop location here
+
+    public static BufferedImage cutImage(BufferedImage image, int w, int h, int x, int y) {
+        BufferedImage img = image.getSubimage(x, y, w, h);
         BufferedImage copyOfImage = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
         Graphics g = copyOfImage.createGraphics();
         g.drawImage(img, 0, 0, null);
